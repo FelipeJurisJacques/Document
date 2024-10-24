@@ -1,0 +1,97 @@
+:root {
+    --delta: 1.9090909090909091;
+    --delta-cm: 0.95cm;
+}
+
+@media print {
+    :root {
+        --delta: 1.333;
+        --delta-cm: 0.7501875468867217cm;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #282A36;
+}
+
+div {
+    width: calc(21 * var(--delta-cm));
+    margin: 0;
+    margin-top: calc(3 * var(--delta-cm));
+    text-align: justify;
+    margin-left: auto;
+    padding-top: calc(3.5 * var(--delta-cm));
+    margin-right: auto;
+    padding-left: calc(3 * var(--delta-cm));
+    margin-bottom: calc(3 * var(--delta-cm));
+    padding-right: calc(3 * var(--delta-cm));
+    padding-bottom: calc(2.5 * var(--delta-cm));
+    background-color: white;
+}
+
+b {
+    font-size: inherit;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 13pt;
+    text-align: left;
+    margin-top: 12pt;
+    font-weight: bold;
+    margin-bottom: 0pt;
+}
+
+p,
+li {
+    font-size: inherit;
+    margin-top: 6pt;
+    margin-bottom: 0pt;
+}
+
+ul {
+    margin: 0cm;
+    padding: 0cm;
+    padding-left: calc(1.27 * var(--delta-cm));
+}
+
+p.retreat {
+    text-indent: calc(1.27 * var(--delta-cm));
+}
+
+p.reference {
+    text-indent: calc(-0.5 * var(--delta-cm));
+    padding-left: calc(0.5 * var(--delta-cm));
+}
+
+div.cloak {
+    height: calc(29.7 * var(--delta-cm));
+    text-align: center;
+}
+
+div.cloak .title {
+    font-size: 16pt;
+}
+
+div.cloak .authors {
+    text-align: center;
+}
+
+@media print {
+    div {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
