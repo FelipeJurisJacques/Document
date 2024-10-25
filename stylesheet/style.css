@@ -23,18 +23,16 @@ body {
     background-color: #282A36;
 }
 
-div {
+div.page,
+div.cloak,
+div.container {
     width: calc(21 * var(--delta-cm));
     margin: 0;
     margin-top: calc(3 * var(--delta-cm));
     text-align: justify;
     margin-left: auto;
-    padding-top: calc(3.5 * var(--delta-cm));
     margin-right: auto;
-    padding-left: calc(3 * var(--delta-cm));
     margin-bottom: calc(3 * var(--delta-cm));
-    padding-right: calc(3 * var(--delta-cm));
-    padding-bottom: calc(2.5 * var(--delta-cm));
     background-color: white;
 }
 
@@ -73,8 +71,13 @@ p.reference {
     padding-left: calc(0.5 * var(--delta-cm));
 }
 
-div.cloak {
+div.cloak,
+div.page {
     height: calc(29.7 * var(--delta-cm));
+    text-align: center;
+}
+
+div.cloak {
     text-align: center;
 }
 
@@ -87,7 +90,11 @@ div.cloak .authors {
 }
 
 @media print {
-    div {
+    body {
+        background-color: white;
+    }
+
+    div.container {
         width: 100%;
         margin-top: 0;
         margin-left: 0;
