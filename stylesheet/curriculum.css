@@ -1,3 +1,8 @@
+* {
+    font-size: 12pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .page {
     display: grid;
     padding-top: 0;
@@ -9,8 +14,13 @@
 }
 
 .left {
-    grid-column: 1;
+    color: white;
     grid-row: 1 / -1;
+    text-align: justify;
+    grid-column: 1;
+    padding-top: 300px;
+    padding-left: 12pt;
+    padding-right: 12pt;
     background-color: #282831;
 }
 

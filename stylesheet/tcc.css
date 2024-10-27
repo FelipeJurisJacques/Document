@@ -1,3 +1,8 @@
+* {
+    font-size: 12pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 div.page,
 div.cloak,
 div.container {
