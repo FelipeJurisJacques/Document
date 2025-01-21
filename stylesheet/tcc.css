@@ -12,3 +12,9 @@ div.container {
     padding-right: calc(3 * var(--delta-cm));
     padding-bottom: calc(2.5 * var(--delta-cm));
 }
+
+.resume,
+.abstract {
+    margin-left: calc(0.8 * var(--delta-cm));
+    margin-right: calc(0.8 * var(--delta-cm));
+}
