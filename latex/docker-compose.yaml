@@ -1,0 +1,9 @@
+services:
+  latex:
+    image: texlive/texlive:latest
+    container_name: latex-container
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    entrypoint: ["pdflatex"]
+    command: ["document.tex"]
