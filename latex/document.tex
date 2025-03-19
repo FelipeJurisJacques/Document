@@ -26,23 +26,14 @@
 
 \title{Gestão Pessoal de Credenciais de Acesso a Serviços Digitais}
 
-\author{Felipe Juris Jacques\inst{1}, Eduardo Dalcin\inst{2} }
-
+\author{Felipe Juris Jacques\inst{1}, Eduardo Dalcin\inst{1} }
 
 \address{
   Especialização em Gestão de Tecnologia da Informação
   \\
-  Instituto Federal de Educação, Ciência e Tecnologia Farroupilha Campus Panambi (IFFAR)
+  Instituto Federal de Educação, Ciência e Tecnologia Farroupilha Campus Panambi
   \\
-  Caixa Postal 98787 -- 740 -- Panambi -- RS -- Brazil
-\nextinstitute
-  Department of Computer Science -- University of Durham\\
-  Durham, U.K.
-\nextinstitute
-  Departamento de Sistemas e Computação\\
-  Universidade Regional de Blumenal (FURB) -- Blumenau, SC -- Brazil
-  \email{\{nedel,flavio\}@inf.ufrgs.br, R.Bordini@durham.ac.uk,
-  jomi@inf.furb.br}
+  (IFFAR) -- Caixa Postal 98787 -- 740 -- Panambi -- RS -- Brazil
 }
 
 \begin{document} 
@@ -68,7 +59,7 @@
 \end{resumo}
 
 
-\section{General Information}
+\section{Introdução}
 
 All full papers and posters (short papers) submitted to some SBC conference,
 including any supporting documents, should be written in English or in
@@ -80,41 +71,199 @@ points of space before each paragraph. Page numbers must be suppressed.
 Full papers must respect the page limits defined by the conference.
 Conferences that publish just abstracts ask for \textbf{one}-page texts.
 
-\section{First Page} \label{sec:firstpage}
+\section{Credenciais de Acesso a Serviços Digitais} \label{sec:firstpage}
 
-The first page must display the paper title, the name and address of the
-authors, the abstract in English and ``resumo'' in Portuguese (``resumos'' are
-required only for papers written in Portuguese). The title must be centered
-over the whole page, in 16 point boldface font and with 12 points of space
-before itself. Author names must be centered in 12 point font, bold, all of
-them disposed in the same line, separated by commas and with 12 points of
-space after the title. Addresses must be centered in 12 point font, also with
-12 points of space after the authors' names. E-mail addresses should be
-written using font Courier New, 10 point nominal size, with 6 points of space
-before and 6 points of space after.
+Qualquer serviço digital que exija autenticidade para identificar usuários
+utiliza credenciais de acesso.
+Embora cada serviço tenha credenciais únicas, eles compartilham padrões
+comuns que os usuários conhecem.
+Além disso, os serviços digitais têm contratos que os usuários devem aceitar, mas a
+tecnologia por trás da segurança não é transparente para os usuários.
+No entanto, é responsabilidade do usuário operar corretamente e respeitar
+práticas de segurança comuns.
 
-The abstract and ``resumo'' (if is the case) must be in 12 point Times font,
-indented 0.8cm on both sides. The word \textbf{Abstract} and \textbf{Resumo},
-should be written in boldface and must precede the text.
+\subsection{A Segurança de Um Serviço Digital}
 
-\section{CD-ROMs and Printed Proceedings}
+As credenciais de acesso devem ser protegidas para evitar que terceiros
+mal-intencionados as usem para obter vantagens indevidas.
+Ao se cadastrar em um serviço digital, é comum fornecer informações
+pessoais de identificação.
+É importante fornecer apenas informações necessárias e verdadeiras,
+considerando quem terá acesso a elas. Deixar credenciais vulneráveis pode
+expor o usuário a riscos ilimitados, como roubo de informações, extorsão,
+invasão e mais.
+É fundamental proteger as credenciais e informar apenas o mínimo necessário
+para minimizar a exposição pessoal.
 
-In some conferences, the papers are published on CD-ROM while only the
-abstract is published in the printed Proceedings. In this case, authors are
-invited to prepare two final versions of the paper. One, complete, to be
-published on the CD and the other, containing only the first page, with
-abstract and ``resumo'' (for papers in Portuguese).
+\section{Processo de Autenticação}
 
-\section{Sections and Paragraphs}
+Quando um usuário acessa um serviço digital, ele faz isso por meio do
+processo de autenticação (login), fornecendo duas informações: uma
+identificação única (telefone, nome ou e-mail) e uma senha secreta.
+É fundamental que a senha seja aleatória e não contenha informações
+que possam ser facilmente memorizadas e principalmente, não deve conter
+informações pessoais, pois isso pode ser descoberto por pessoas
+mal-intencionadas.
+Além disso, informações pessoais podem ser obtidas de várias maneiras,
+como em perfis públicos do usuário.
 
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
+\subsection{Multi Fator de Autenticação}
 
-\subsection{Subsections}
+A autenticação multifator (MFA) é uma medida de segurança adicional que
+exige dois ou mais fatores de verificação para acessar uma conta ou
+recurso online.
+Isso aumenta a dificuldade de acesso não autorizado, pois mesmo com a
+senha, o atacante precisaria de um segundo fator, como um código
+enviado ao smartphone, uma impressão digital ou outro tipo de
+verificação adicional.
+A MFA se tornou uma prática padrão em serviços digitais, como bancos,
+redes sociais e sistemas corporativos, fornecendo uma camada adicional
+de segurança contra roubo de identidade e fraude cibernética.
 
-The subsection titles must be in boldface, 12pt, flush left.
+\subsection{Duplo Fator de Autenticação}
+
+O duplo fator de autenticação (2FA) é uma medida de segurança adicional
+que exige um segundo fator além da senha, como um código enviado ao
+celular ou um token de hardware.
+Isso torna mais difícil para os atacantes acessarem contas online, mesmo
+que eles obtenham a senha.
+Muitos serviços online oferecem 2FA como opção para aumentar a segurança
+dos usuários.
+Ativar o 2FA é uma etapa importante para proteger informações pessoais e
+é recomendável habilitá-lo sempre.
+Além disso, é possível usar múltiplos hardwares e é indispensável
+realizar backup em nuvem ou arquivo digital. No entanto, alguns serviços
+não oferecem 2FA ou exigem aplicativos proprietários, então é importante
+estar atento aos recursos de recuperação de acesso.
+
+\section{Phishing}
+
+Phishing é um tipo de ataque cibernético onde criminosos tentam obter
+vantagem ou obter informações confidenciais, como senhas, informações
+pessoais e até detalhes de cartões de crédito, por meio de comunicações
+fraudulentas.
+Este termo deriva da palavra "fishing", que significa pescar em inglês,
+aludindo à ideia de lançar iscas para capturar vítimas desavisadas.
+
+Os ataques de phishing podem ocorrer através de e-mails, mensagens de
+texto e chamadas telefônicas fraudulentas, serviços online falsos que
+se assemelham muito com os verdadeiros, aplicativos malignos em lojas
+de aplicativos, postagens e propagandas enganosas em redes sociais e
+anúncios fraudulentos de internet, onde os golpistas se passam por
+entidades legítimas para persuadir as pessoas a fornecerem suas informações
+pessoais ou tirar vantagens para realizar ataques ao dispositivo.
+
+A conscientização sobre esses golpes é crucial, pois o conhecimento é a
+primeira linha de defesa contra os ataques cibernéticos.
+É importante estar atento a mensagens suspeitas que solicitam dados
+confidenciais ou contêm links e anexos desconhecidos. Para se proteger,
+verifique a autenticidade das mensagens, não clique em links ou baixe
+anexos de fontes desconhecidas e use soluções de segurança confiáveis.
+Se receber um código de autenticação sem solicitar, não o informe a
+ninguém e altere sua senha, pois pode ser uma tentativa de invasão.
+
+\section{Multiplas Credencais de Acesso}
+
+É comum que os usuários precisem gerenciar muitas credenciais de acesso
+para diversos serviços online.
+Nessa situação, não é recomendado repetir senhas para evitar que um invasor
+descubra uma senha e acesse outros serviços.
+É importante ter uma boa gestão de senhas e credenciais, incluindo a
+possibilidade de recuperar senhas esquecidas.
+
+\subsection{Lugares para Guardar Anotações de Credênciais}
+
+É improvável que uma pessoa possa memorizar todas as credenciais de acesso,
+então é necessário anotar as informações em algum lugar.
+É importante anotar não só o login e senha, mas também outros detalhes,
+como códigos de recuperação e descrições.
+
+Ao usar um meio digital para anotações, é desejável usar software ou
+aplicativos de confiança para proteger as informações. Além disso, é útil
+evitar letras e caracteres semelhantes para evitar confusões.
+
+\subsubsection{Anotações em Meio Físico}
+
+É comum optar por anotar as informações das credenciais de acesso em um
+caderno, já que requer menos desafios de informatização.
+Deve se ter atenção a senhaa, já que representar caracteres, letras
+maiúsculas ou minúsculas pode ser mais difícil do que digitalmente e
+causar confusões nos usuários mais despreparados.
+
+Optar por anotar informações de credenciais de forma digital em arquivos
+no computador pessoal, smartfone ou pendrive envolve complexidades pois
+para fornecer algum tipo de segurança, requer criptografia e backups
+atualizados para proteger arquivos e evitar que possam ser acessados por
+usuários indesejados.
+
+\subsubsection{Anotações em Serviços de Terceiros}
+
+Criptografar arquivos manualmente é desafiador e arriscado, porém,
+existem softwares de terceiros que podem auxiliar nessa tarefa de gerir
+arquivos com informações possais.
+Uma maneira mais simples é fazer uso de serviços de terceiros que
+oferecem softwares e aplicativos para gerenciar logins e senhas de
+credenciais.
+Mas antes de tudo, o usuário deve estar atento aos termos de uso de
+qualquer serviço de software.
+
+Existem diversos aplicativos, softwares ou até projetos para gerir
+credenciais de acesso, um deles é o projeto de código aberto multi
+plataforma KeeWeb que pode ser replicado, instalado em seu computador ou
+servidor pessoal ou mesmo usar gratuitamente na internet.
+KeeWeb não é um serviço, portanto não coleta suas informações, cabe ao
+usuário optar em salvar em uma nuvem de uso pessoal ou no próprio
+dispositivo pessoal, já que o mesmo gera arquivos que estão sempre
+criptografados, podendo ser uma alternativa segura aos usuários que
+pretendem carregar o arquivo criptografado consigo mesmo.
+
+Normalmente as empresas privadas que oferecem softwares de assinatura
+para anti vírus, também podem oferecer serviços para gestão de
+credenciais de acesso, como por exemplo a Kaspersky que oferece o
+Kaspersky Password Manager.
+
+
+O usuário deve evitar anotar senhas em no celular em aplicativos de
+bloco de notas, como contato de ligações telefônicas, aplicativos de
+mensagens em geral, inclusive WhatsApp, pois todos esses recursos não são
+criptografados e normalmente são protegidos para esses fins e podem ser
+explorados por quem tiver acesso ao dispositivo.
+
+\subsection{Anotações em Nuvem}
+
+É muito comum os usuários fazerem uso dos serviços de terceiros,
+oferecidos pelo Google, Microsoft, Opera e até outras empresas que
+possuem algum sistema operacional para computadores ou navegadores de
+internet.
+Muitas vezes os usuários já estão fazendo o uso desses serviços para
+anotarem seus logins e senhas sem se darem por conta, já que aquele botão
+que aparece automaticamente para salvar o login e a senha é muito prático
+de se utilizar até mesmo de forma desatenta, o que requer atenção
+redobrada ao utilizar um dispositivo que não seja de uso pessoal.
+
+Normalmente não há custo sobre esses serviços que estão embutidos em
+sistema operacionais ou navegadores de internet.
+Somente se o usuário estiver autenticado com uma credencial vinculada ao
+mesmo, haverá a opção de ter seus logins e senhas salvos em nuvem e
+sincronizados em seus dispositivos levando a praticidade de realizar a
+autenticação sem necessariamente fazer conhecimento do login ou da senha.
+
+O Google permite salvar logins e senhas em dispositivos com sistema
+operacional Android ou no navegador de internet Chrome, o usuário poderá
+visualizar e editar os logins e senhas online nas configurações da
+própria conta.
+Já a Microsoft disponibiliza salvar as mesmas informações diretamente no
+navegador de internet Edge, o usuário poderá visualizar e editar os
+logins e senhas através do aplicativo Microsoft Autenticador que também
+é um aplicativo utilizando para 2FA, sendo essa uma opção cômoda aos
+usuários que pretendem gerenciar as duas informações em um mesmo lugar.
+Ambos os casos citados não permitem anotar mais detalhes além de login e
+senha das respectivas credenciais de acesso sendo um fator limitante,
+principalmente ao anotar descrições, pins e histórico de senhas,
+inclusive essas informações não estão protegidas nos navegadores de
+internet e estão protegidas por uma senha simples e curta nos sistemas
+operacionais, portanto, o 2FA se torna crucial para as credenciais de
+acesso salvas nesses serviços.
 
 \section{Figures and Captions}\label{sec:figs}
 
