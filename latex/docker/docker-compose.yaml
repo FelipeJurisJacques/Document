@@ -1,0 +1,9 @@
+services:
+  latex:
+    build: ./
+    container_name: latex_container
+    volumes:
+      - ../:/workspace
+    working_dir: /workspace
+    entrypoint: ["latexmk", "-pdf", "document.tex"]
+    command: ["document.tex"]
