@@ -112,8 +112,8 @@ A autenticação multifator (MFA) é uma medida de segurança adicional que
 exige dois ou mais fatores de verificação para acessar uma conta ou
 recurso online.
 Isso aumenta a dificuldade de acesso não autorizado, pois mesmo com a
-senha, o atacante precisaria de um segundo fator, como um código
-enviado ao smartphone, uma impressão digital ou outro tipo de
+senha, o atacante precisaria de fatores adicionais, como um código
+enviado ao smartfone ou e-mail, uma impressão digital ou outro tipo de
 verificação adicional.
 A MFA se tornou uma prática padrão em serviços digitais, como bancos,
 redes sociais e sistemas corporativos, fornecendo uma camada adicional
@@ -121,19 +121,24 @@ de segurança contra roubo de identidade e fraude cibernética.
 
 \subsection{Duplo Fator de Autenticação}
 
-O duplo fator de autenticação (2FA) é uma medida de segurança adicional
-que exige um segundo fator além da senha, como um código enviado ao
-celular ou um token de hardware.
+O duplo fator de autenticação (2FA), autenticação em dois fatores (ADF) ou
+até mesmo verificação em duas etapas (TFA) é uma medida de segurança
+adicional que exige um segundo fator além da senha, como um código enviado
+ao smartfone ou um dispositivo token (token de hardware).
 Isso torna mais difícil para os atacantes acessarem contas online, mesmo
 que eles obtenham a senha.
-Muitos serviços online oferecem 2FA como opção para aumentar a segurança
-dos usuários.
-Ativar o 2FA é uma etapa importante para proteger informações pessoais e
-é recomendável habilitá-lo sempre.
-Além disso, é possível usar múltiplos hardwares e é indispensável
-realizar backup em nuvem ou arquivo digital. No entanto, alguns serviços
-não oferecem 2FA ou exigem aplicativos proprietários, então é importante
-estar atento aos recursos de recuperação de acesso.
+
+Muitos serviços online oferecem o duplo fator de autenticação como opção
+para aumentar a segurança dos usuários.
+Ativar o duplo fator de autenticação é uma etapa importante para proteger
+informações pessoais e é recomendável habilitá-lo sempre.
+
+Além disso, é possível usar diversos dispositivos simultâneos
+para armazenar as chaves de duplo fator de autenticação e é indispensável
+realizar cópias de segurança em nuvem ou arquivo digital.
+No entanto, alguns serviços não oferecem o duplo fator de autenticação ou
+exigem aplicativos proprietários, então é importante estar atento aos
+termos e recursos de recuperação de acesso.
 
 \section{Phishing}
 
@@ -191,7 +196,7 @@ causar confusões nos usuários mais despreparados.
 
 Optar por anotar informações de credenciais de forma digital em arquivos
 no computador pessoal, smartfone ou pendrive envolve complexidades pois
-para fornecer algum tipo de segurança, requer criptografia e backups
+para fornecer algum tipo de segurança, requer criptografia e cópias de seguranças
 atualizados para proteger arquivos e evitar que possam ser acessados por
 usuários indesejados.
 
@@ -294,53 +299,255 @@ digitais na conclusão de seu artigo:
   fracas e, portanto, mais vulneráveis a ataques. \cite{araujo:2015}
 \end{quote}
 
-\section{Figures and Captions}\label{sec:figs}
+Berrios et al. (2023) destacam que o estudo em seu artigo "Factorizing 2FA:
+Forensic analysis of two-factor authentication applications" analisou 15
+aplicativos de autenticação de dois fatores (2FA) em diferentes sistemas
+operacionais, incluindo Android, iOS e Windows 10, com foco na análise de
+artefatos forenses deixados por esses aplicativos.
+A pesquisa descobriu que a maioria dos aplicativos armazena informações em
+texto simples ou criptografado/codificado, incluindo chaves secretas,
+timestamps, nomes de contas e endereços de e-mail, o que pode permitir que
+a funcionalidade 2FA seja contornada.
+A descoberta de chaves secretas pode permitir que os examinadores forenses
+gerem um OTP 2FA válido sem o uso do dispositivo original, reduzindo a
+necessidade de manipular diretamente o dispositivo e potencialmente alterar
+os dados.
+O estudo destaca a importância da criptografia na proteção de dados do
+usuário, especialmente em aplicativos 2FA, e sugere a análise de versões
+futuras dos aplicativos e a exploração de outros tipos de autenticação
+multifator.
+
+Grimes (2019), em seu artigo "The many ways to hack 2FA" de argumenta que a
+autenticação de dois fatores (2FA) não é infalível e pode ser facilmente
+contornada.
+A fraqueza central da 2FA reside no fato de que o token de acesso é
+geralmente tratado da mesma forma, independentemente do formato ou tipo de
+autenticação, o que significa que, uma vez obtido o token, o invasor pode
+acessar o recurso protegido da mesma forma que o usuário legítimo.
 
 
-Figure and table captions should be centered if less than one line
-(Figure~\ref{fig:exampleFig1}), otherwise justified and indented by 0.8cm on
-both margins, as shown in Figure~\ref{fig:exampleFig2}. The caption font must
-be Helvetica, 10 point, boldface, with 6 points of space before and after each
-caption.
+Grimes (2019) descreve três métodos gerais para hackear a 2FA, incluindo
+exploração de vulnerabilidades tecnológicas, ataques de engenharia social
+e ataques físicos.
+Além disso, são apresentados exemplos específicos de como a 2FA pode ser
+comprometida, como roubo de cookies, sequestro de assunto, troca de SIM,
+falsificação de SMS, geradores de código duplicados.
+O autor conclui enfatizando a importância de discutir
+as vulnerabilidades da 2FA para implementar e usar soluções mais seguras
+e conscientizar administradores e usuários sobre os pontos fortes e fracos
+da 2FA.
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.5\textwidth]{fig1.jpg}
-\caption{A typical figure}
-\label{fig:exampleFig1}
-\end{figure}
+Para mais exemplos de como a 2FA pode ser hackeada, Grimes (2019) recomenda
+o webinar ‘11 Ways to Defeat 2FA’, disponível em
+https://info.knowbe4.com/webinar-11-ways-to-defeat-2fa (acesso em 04/11/2024).
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.3\textwidth]{fig2.jpg}
-\caption{This figure is an example of a figure caption taking more than one
-  line and justified considering margins mentioned in Section~\ref{sec:figs}.}
-\label{fig:exampleFig2}
-\end{figure}
+\section{Metodologia}
 
-In tables, try to avoid the use of colored or shaded backgrounds, and avoid
-thick, doubled, or unnecessary framing lines. When reporting empirical data,
-do not use more decimal digits than warranted by their precision and
-reproducibility. Table caption must be placed before the table (see Table 1)
-and the font used must also be Helvetica, 10 point, boldface, with 6 points of
-space before and after each caption.
+A metodologia adotada é a pesquisa aplicada, que segundo Gil (2019), a
+pesquisa aplicada, abrange estudos elaborados com a finalidade de resolver
+problemas identificados no âmbito das sociedades em que os pesquisadores
+vivem.
 
-\begin{table}[ht]
-\centering
-\caption{Variables to be considered on the evaluation of interaction
-  techniques}
-\label{tab:exTable1}
-\includegraphics[width=.7\textwidth]{table.jpg}
-\end{table}
+O público-alvo desta pesquisa são os usuários de serviços digitais,
+especialmente aqueles que compartilham dados pessoais online e utilizam
+plataformas digitais para fins profissionais ou financeiros, que, portanto,
+necessitam de maior atenção e cuidado com a segurança digital.
 
-\section{Images}
 
-All images and illustrations should be in black-and-white, or gray tones,
-excepting for the papers that will be electronically available (on CD-ROMs,
-internet, etc.). The image resolution on paper should be about 600 dpi for
-black-and-white images, and 150-300 dpi for grayscale images.  Do not include
-images with excessive resolution, as they may take hours to print, without any
-visible difference in the result.
+Este estudo utilizou uma abordagem quantitativa para investigar as práticas
+de segurança digital dos usuários em relação às suas credenciais de acesso.
+A coleta de dados foi realizada de forma anônima, através de um questionário
+online elaborado na plataforma Microsoft Forms.
+O questionário abordava temas como o uso de senhas, autenticação em dois
+fatores, gestão de credenciais, entre outros, e foi divulgado em grupos de
+WhatsApp.
+A pesquisa garantiu a privacidade e
+confidencialidade das respostas, assegurando o anonimato dos participantes
+
+Realizado uma avaliação prática dos aplicativos de autenticação de dois
+fatores Google Authenticator, Microsoft Authenticator e Aegis em sistema
+Android, durante um período um semestre. Os aplicativos foram selecionados
+com base em sua popularidade e disponibilidade, bem como a presença de um
+aplicativo de código aberto (Aegis) para fornecer uma perspectiva mais
+diversificada.
+Durante o período de teste, foram avaliados os recursos oferecidos por cada
+aplicativo, incluindo a facilidade de uso, o gerenciamento de contas, os
+recursos de segurança adicionais e a usabilidade geral.
+Além disso, foram registrados os problemas e dificuldades encontrados
+durante o uso diário dos aplicativos, a fim de avaliar sua eficácia e
+eficiência em diferentes contextos.
+
+Realizado uma busca para experimentar aplicativos para gerenciar
+virtualmente as senhas de serviços digitais basena do nos sistemas
+operacionais Android e Windows.
+
+\section{Resultados e Discussão}
+
+\subsection{Pesquisa de Campo}
+
+A pesquisa obteve uma amostra composta por 17 participantes, queresponderam
+ao questionário voluntariamente durante um período de dois meses no segundo
+semestre do ano de 2024.
+Na pergunta sobre o uso de senhas fortes, 35% dos participantes afirmaram
+usar senhas muito grandes e aleatórias, enquanto 29% utilizam frases longas
+e criativas.
+Já na pergunta sobre a vivência com a tecnologia, a maioria dos
+participantes possui mais de 10 anos de experiência, e uma boa parte
+trabalha ou estuda na área.
+A respeito da memorização de senhas em navegadores, 59% disseram digitar as
+senhas uma única vez e permanecer logados.
+Além disso, 41% dos participantes utilizam sempre a autenticação em dois
+fatores, sendo o Google Authenticator o mais usado.
+A maioria dos participantes, 10, memoriza suas senhas, e 24% já tiveram o
+login roubado.
+Por fim, a avaliação média dos participantes sobre a segurança dos serviços
+digitais foi de 3,88, e sobre a segurança das suas próprias ações foi de
+3,47.
+
+Na pergunta aberta, 'Sinta-se livre para sugerir um aplicativo, software ou
+serviço de segurança pessoal', houve apenas uma resposta.
+O participante sugeriu: 'Joga fora Hotmail e Outlook e usa tudo da Google com
+dados falsos (data de nascimento etc), aí ninguém consegue recuperar a conta,
+a não ser você.
+Visto que teus dados estão expostos em todos os lugares'.
+Essa resposta possui preferencia clara aos serviços do Google em relação a
+Microsoft e tem vies ao anônimato para fortalecer a segurança pessoal.
+
+\subsection{Avaliação Prática dos Aplicativos de Duplo Fator de Autenticação}
+
+Durante a avaliação prática dos aplicativos de autenticação de dois fatores,
+foram identificados pontos positivos e negativos em relação à usabilidade,
+segurança e eficácia dos aplicativos.
+
+\subsubsection{Google Authenticator}
+
+O Google Authenticator foi considerado o mais fácil de usar, com uma
+interface simples, auto explicativa e intuitiva.
+No entanto, o aplicativo não oferece recursos adicionais, cópias de segurança
+é exclusivamente em nuvem e sómente é permitido instalar o aplicativo em um
+aparelho GMS (Google Mobile Services).
+
+Em um aparelho GMS, a memorização de senhas ou preenchimento automático de
+senhas oferecida pelo Google não tem relação com esse aplicativo, na verdade
+esse é um recurso do próprio aplicativo do Google.
+
+Para utilizar oduplo fator deautenticação no prórprio serviço do Google,
+é necessário acessar a página de gerenciar a sua conta do Google, procurar
+a opção de segurança.
+
+\subsubsection{Microsoft Authenticator}
+
+Microsoft Authenticator, por sua vez, possui uma interface mais complexa com
+poucas intruções de utilização do aplicativo.
+Há recusros adicionais para as contas Microsoft, como a possibilidade de
+autenticar apenas confirmando a notificação no smartfone, sem a necessidade
+de digitar o código 2FA e inpecionar o historico de atividade.
+O Microsoft Authenticator oferece diversos recursos adicionais, talvez o mais
+importante seja a possibilidade de memorização de senhas ou preenchimento
+automático de senhas.
+O cópias de segurança das chaves 2FA é exclusivamente em nuvem e somente é possível
+instalar o aplicativo em dispositivos GMS.
+A Microsoft oferece recursos corporativos, então para quem utilizar esse
+aplicativo para proteger sua conta corporativa, precisa usar uma conta pessoal
+para realizar o cópias de segurança das chaves 2FA, também é possível utilizar outros
+aplicativos para essa finalidade, mas essa opção está um pouco escondida.
+
+\subsubsection{Aegis}
+
+Já o Aegis, por ser um aplicativo de código aberto, oferece maior transparência
+e controle sobre os dados do usuário, mas possui uma interface de configuração
+e arquivos que pode ser menos amigável para usuários mais leigos.
+Nele é possível adicionar e gerenciar chaves de autentiação de dois fatos,
+exportar e importar cópias de segurançats para diversos aplicativos ou em formato de arquivos,
+inclusive em formato com criptografia.
+A maior vantagem do Aegis é a possibilidade de instalar o aplicativo por meio da
+loja de aplicativos de código aberto F-Droid, uma alternativa ao Google Play
+Store, permitindo que o mesmo possa ser intalado em dispositivos Android sem GMS
+ou AOSP (Android Open Source Project).
+
+\subsection{Avaliação de Aplicativos de Gerenciamento de Senhas}
+
+No sistema operacional Android com GMS o Google automaticamente oferece um popup
+para salvar a senha no momento em que é digitada no processo de autenticação de
+algum aplicativo ou serviço.
+Como o Google não é especificamente um aplicativo de segurança, pode parecer um
+pouco escondido a opção de gerenciar as senhas pelas configurações de conta.
+Além do gerenciamento de senhas com sincronização em nuvem, é possível adicionar
+anotações, exportar e importar em formato de plianilha CSV sem criptografia.
+
+O mesmo pop-up do Android utilizado pelo Google pode ser substituido por
+aplicativos de terceiros, como o Microsoft Authenticator, citado anteriormente
+que oferece recursos adicionais para gerenciar senhas, sendo assim um aplicativo
+praticamente completo para a segurança pessoal do usuário, com sincronização em
+nuvem.
+Também é possível adicionar anotações, exportar e importar em formato de
+plianilha CSV sem criptografia.
+O sistema operacional Windows não possui opção nativa ou pré instalada para
+salvar senhas, as senhas gerenciadas por esse aplicativo são as mesmas salvas no
+navegador de internet Microsoft Edge do Windows, que no Windows só funcionam
+dentro do proprio navegador.
+
+KeeWeb é um aplicativo de código aberto que oferece uma interface amigável para
+gerenciar senhas, com maior foco no gerenciamento das anotações.
+Diferente dos aplicativos citados anteriormente, o KeeWeb não é um aplicativo
+nativo, mas sim um aplicativo web progressivo, que pode ser instalado em qualquer
+dispositivo com navegador de internet, porém, sem integração com o sistema
+operacional, ou seja, nele, o usuário vai apenas realizar anotações.
+O KeeWeb permite salvar as anotações de senhas em formato de arquivos com ou sem
+criptografia, os arquivos podem ser exportados localmente ou em nuvens de
+serviços de terceiros em que o usuários tiver preferencia.
+
+\section{Considerações Finais}
+
+A pesquisa revelou que os participantes possuem um nível de conscientização sobre
+a importância da segurança digital, demonstrado pelo uso de senhas fortes e pela
+autenticação de dois fatores.
+No entanto, algumas práticas de segurança, como memorizar senhas e permanecer
+logado, ainda podem ser melhoradas.
+Uma parcela significativa dos participantes já teve problemas de segurança, o que
+indica que as práticas atuais não são totalmente eficazes.
+A pontuação média da segurança em serviços digitais e da segurança pessoal indica
+espaço para melhorias das ações pessoais e dos serviços digitais.
+
+A memorização de senhas em navegadores de internet pode expor o acesso ao serviço
+sem exigir senha.
+Embora a sincronia em nuvem seja suficientemente segura, não é solicitada uma
+senha mestre para liberar a autenticação ou até para visualizar a senha.
+Ambos os casos são escolhidas pelos usuários devido à conveniência sedutora de não
+ter que se preocupar com senhas e pode permitir que quem tenha acesso ao
+dispositivo acesse o serviço, o que é ainda mais inseguro se o dispositivo não
+estiver protegido por um bloqueio de tela.
+
+
+Felizmente, a autenticação em duas etapas é uma camada adicional de segurança que
+pode proteger as contas dos usuários.
+No entanto, essa tecnologia é práticamente restrita a dispositivos moveis.
+Utilizar apenas um dispositivo, com cópias de segurança em nuvem e proteger o mesmo serviço de
+nuvem nesse dispositivo pode ser uma armadilha que não é préviamente avisado aos
+usuários.
+Portanto, é importante possuir uma estrategia de recuperação do cópias de segurança ou possuir
+mais de um dispositivo ao mesmo tempo para autenticação, escolhendo bem o
+aplicativo e os dispositivos para essa situação, do contrário, em caso de perda
+ou roubo do dispositivo, essa camada adicional de segurança pode dificultar o
+acesso do proprio proprietário, principalmente se o usuário apenas utiliza o
+smartfone.
+
+Utilizar aplicativos de gerenciamento de senhas, apresentou grande praticidade,
+especialmente para os serviços que não se mantem autenticados, solicitam a
+autenticação com frequencia ou perdem a autenticação por defeito.
+Porém os aplicativos de gerenciamento de senhas e navegadores de internet não
+são perfeitos, em alguns casos, apresnetam o popup sob a caixa de entrada do
+login, senha ou botões.
+Já o KeeWeb, se não estiver configurado para o mesmo idioma do dispositivo, foi
+prejudicado no sistema operacional Android, por ser um aplicativo web progressivo,
+o Google Chrome insiste em traduzir o aplicativo e até mesmo as senhas, tornando
+as senhas invalidas.
+
+Todo o serviço que é bem feito, vai usar um algoritmo de derivação de chave e
+nunca vai salvar a sua a senha de forma aberta.
+Logo, se o mesmo limita o comprimento ou variabilidade de caracteres de sua senha,
+é um grande indicativo de que o serviço não está preocupado com a segurança de
+seus dados.
 
 \bibliographystyle{sbc}
 \bibliography{references}
