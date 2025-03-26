@@ -76,23 +76,33 @@ Qualquer serviço digital que exija autenticidade para identificar usuários
 utiliza credenciais de acesso.
 Embora cada serviço tenha credenciais únicas, eles compartilham padrões
 comuns que os usuários conhecem.
-Além disso, os serviços digitais têm contratos que os usuários devem aceitar, mas a
-tecnologia por trás da segurança não é transparente para os usuários.
+Além disso, os serviços digitais têm contratos que os usuários devem aceitar,
+mas a tecnologia por trás da segurança não é transparente para os usuários.
 No entanto, é responsabilidade do usuário operar corretamente e respeitar
 práticas de segurança comuns.
 
-\subsection{A Segurança de Um Serviço Digital}
+Ao se cadastrar, para possuir uma conta de usuário em um serviço digital,
+é comum fornecer informações pessoais básica de identificação do usuário.
+Esse cadastro dará origem a um conjunto de credenciais de acesso de uso
+indiviual, que é utilizado para ter acesso ao respectivo serviço digital,
+normalmente um identificador unico do usuário como telefone, CPF, nome ou
+e-mail e uma senha que deve ser forte e segura, de conhecimento exclusivo
+do usuário.
+
+\subsection{Segurança de Serviços Digital}
+
+Por mais sofisticados que os serviços digitais possam ser, não existe
+garantias de segurança. É fundamental mitigar os riscos de segurança
+por meio de práticas individuais.
 
 As credenciais de acesso devem ser protegidas para evitar que terceiros
 mal-intencionados as usem para obter vantagens indevidas.
-Ao se cadastrar em um serviço digital, é comum fornecer informações
-pessoais de identificação.
-É importante fornecer apenas informações necessárias e verdadeiras,
-considerando quem terá acesso a elas. Deixar credenciais vulneráveis pode
-expor o usuário a riscos ilimitados, como roubo de informações, extorsão,
-invasão e mais.
-É fundamental proteger as credenciais e informar apenas o mínimo necessário
-para minimizar a exposição pessoal.
+Deixar credenciais vulneráveis pode expor o usuário a riscos ilimitados,
+como roubo de informações, extorsão, invasão e mais.
+
+Em um cadadstro de conta de usuário é importante fornecer apenas informações
+necessárias e verdadeiras, informando apenas o mínimo necessário para
+minimizar a exposição pessoal, considerando quem terá acesso a elas.
 
 \section{Processo de Autenticação}
 
@@ -115,9 +125,12 @@ Isso aumenta a dificuldade de acesso não autorizado, pois mesmo com a
 senha, o atacante precisaria de fatores adicionais, como um código
 enviado ao smartfone ou e-mail, uma impressão digital ou outro tipo de
 verificação adicional.
+
 A MFA se tornou uma prática padrão em serviços digitais, como bancos,
 redes sociais e sistemas corporativos, fornecendo uma camada adicional
 de segurança contra roubo de identidade e fraude cibernética.
+Porém, não existe um padrão de MFA, cada serviço digital tem suas
+próprias políticas de segurança.
 
 \subsection{Duplo Fator de Autenticação}
 
@@ -128,17 +141,33 @@ ao smartfone ou um dispositivo token (token de hardware).
 Isso torna mais difícil para os atacantes acessarem contas online, mesmo
 que eles obtenham a senha.
 
+É possível usar diversos dispositivos simultâneos para armazenar as chaves
+de duplo fator de autenticação e é indispensável realizar cópias de
+segurança em nuvem ou arquivo digital.
+No entanto, alguns serviços não oferecem o duplo fator de autenticação ou
+exigem aplicativos proprietários, então é importante estar atento a
+política de segurança e recursos de recuperação de acesso de contas.
+
 Muitos serviços online oferecem o duplo fator de autenticação como opção
 para aumentar a segurança dos usuários.
 Ativar o duplo fator de autenticação é uma etapa importante para proteger
 informações pessoais e é recomendável habilitá-lo sempre.
 
-Além disso, é possível usar diversos dispositivos simultâneos
-para armazenar as chaves de duplo fator de autenticação e é indispensável
-realizar cópias de segurança em nuvem ou arquivo digital.
-No entanto, alguns serviços não oferecem o duplo fator de autenticação ou
-exigem aplicativos proprietários, então é importante estar atento aos
-termos e recursos de recuperação de acesso.
+Um uso comun do duplo fator de autenticação é por meio do smartfone,
+utilizando um aplicativo de autenticação de dois fatores para gerar
+códigos de autenticação em tempo real sem conexão com a internet.
+Embora cada serviço possua maneiras diferentes de ativar o duplo fator
+de autenticação, normalmente é necessário acessar a configuração de
+segurança da conta do usuário, procurar a opção de ativar o duplo fator
+de autenticação ou algo relacionado ao termo.
+Será apresendao um código QR para ser fotografado pelo aplicativo no
+smartfone, em seguida será necessário digitar o código gerado pelo
+aplicativo para ativar o duplo fator de autenticação.
+
+Independente do aplicativo a ser usado para armazenar as chaves de
+duplo fator de autenticação, é importante realizar cópias de segurança
+em nuvem ou em arquivo digital para evitar perda de acesso às contas
+de usuário.
 
 \section{Phishing}
 
@@ -190,84 +219,33 @@ evitar letras e caracteres semelhantes para evitar confusões.
 
 É comum optar por anotar as informações das credenciais de acesso em um
 caderno, já que requer menos desafios de informatização.
-Deve se ter atenção a senhaa, já que representar caracteres, letras
+Deve se ter atenção a senhas, já que representar caracteres, letras
 maiúsculas ou minúsculas pode ser mais difícil do que digitalmente e
 causar confusões nos usuários mais despreparados.
 
 Optar por anotar informações de credenciais de forma digital em arquivos
-no computador pessoal, smartfone ou pendrive envolve complexidades pois
-para fornecer algum tipo de segurança, requer criptografia e cópias de seguranças
-atualizados para proteger arquivos e evitar que possam ser acessados por
-usuários indesejados.
+no computador pessoal, smartfone ou pendrive é arriscado devido a
+complexidades envolvidas, pois para fornecer algum tipo de segurança,
+requer criptografia e cópias de seguranças atualizados para proteger
+arquivos e evitar que possam ser acessados por usuários indesejados.
 
 \subsubsection{Anotações em Serviços de Terceiros}
 
-Criptografar arquivos manualmente é desafiador e arriscado, porém,
-existem softwares de terceiros que podem auxiliar nessa tarefa de gerir
-arquivos com informações possais.
-Uma maneira mais simples é fazer uso de serviços de terceiros que
-oferecem softwares e aplicativos para gerenciar logins e senhas de
-credenciais.
-Mas antes de tudo, o usuário deve estar atento aos termos de uso de
-qualquer serviço de software.
+Os principais navegadores de internet oferecem recursos simples para
+armazenar informações básicas das credenciais de acesso. Alguns até
+com a possibilidade de sincronizar as informações entre dispositivos e
+normalmente sem custos adicionais.
 
-Existem diversos aplicativos, softwares ou até projetos para gerir
-credenciais de acesso, um deles é o projeto de código aberto multi
-plataforma KeeWeb que pode ser replicado, instalado em seu computador ou
-servidor pessoal ou mesmo usar gratuitamente na internet.
-KeeWeb não é um serviço, portanto não coleta suas informações, cabe ao
-usuário optar em salvar em uma nuvem de uso pessoal ou no próprio
-dispositivo pessoal, já que o mesmo gera arquivos que estão sempre
-criptografados, podendo ser uma alternativa segura aos usuários que
-pretendem carregar o arquivo criptografado consigo mesmo.
+Por outro lado, para se ter mais controle de informações e recursos de
+seguraça, existem programas e aplicativos de terceiros podem ser usados
+para armazenar informações de credenciais de acesso, oferecendo diversas
+vantagens. Normalmente essa opção exige algum tipo de assinatura.
 
-Normalmente as empresas privadas que oferecem softwares de assinatura
-para anti vírus, também podem oferecer serviços para gestão de
-credenciais de acesso, como por exemplo a Kaspersky que oferece o
-Kaspersky Password Manager.
-
-
-O usuário deve evitar anotar senhas em no celular em aplicativos de
-bloco de notas, como contato de ligações telefônicas, aplicativos de
-mensagens em geral, inclusive WhatsApp, pois todos esses recursos não são
-criptografados e normalmente são protegidos para esses fins e podem ser
-explorados por quem tiver acesso ao dispositivo.
-
-\subsection{Anotações em Nuvem}
-
-É muito comum os usuários fazerem uso dos serviços de terceiros,
-oferecidos pelo Google, Microsoft, Opera e até outras empresas que
-possuem algum sistema operacional para computadores ou navegadores de
-internet.
-Muitas vezes os usuários já estão fazendo o uso desses serviços para
-anotarem seus logins e senhas sem se darem por conta, já que aquele botão
-que aparece automaticamente para salvar o login e a senha é muito prático
-de se utilizar até mesmo de forma desatenta, o que requer atenção
-redobrada ao utilizar um dispositivo que não seja de uso pessoal.
-
-Normalmente não há custo sobre esses serviços que estão embutidos em
-sistema operacionais ou navegadores de internet.
-Somente se o usuário estiver autenticado com uma credencial vinculada ao
-mesmo, haverá a opção de ter seus logins e senhas salvos em nuvem e
-sincronizados em seus dispositivos levando a praticidade de realizar a
-autenticação sem necessariamente fazer conhecimento do login ou da senha.
-
-O Google permite salvar logins e senhas em dispositivos com sistema
-operacional Android ou no navegador de internet Chrome, o usuário poderá
-visualizar e editar os logins e senhas online nas configurações da
-própria conta.
-Já a Microsoft disponibiliza salvar as mesmas informações diretamente no
-navegador de internet Edge, o usuário poderá visualizar e editar os
-logins e senhas através do aplicativo Microsoft Autenticador que também
-é um aplicativo utilizando para 2FA, sendo essa uma opção cômoda aos
-usuários que pretendem gerenciar as duas informações em um mesmo lugar.
-Ambos os casos citados não permitem anotar mais detalhes além de login e
-senha das respectivas credenciais de acesso sendo um fator limitante,
-principalmente ao anotar descrições, pins e histórico de senhas,
-inclusive essas informações não estão protegidas nos navegadores de
-internet e estão protegidas por uma senha simples e curta nos sistemas
-operacionais, portanto, o 2FA se torna crucial para as credenciais de
-acesso salvas nesses serviços.
+De qualquer forma, deve-se evitar anotar senhas em no celular em
+aplicativos de bloco de notas, aplicativos de mensagens em geral ou até
+em formato de contatos de telefones, pois todos esses recursos não são
+criptografados e normalmente são projatos para esses fins e podem ser
+explorados usuários mal intencionados ou brechas de segurança.
 
 \section{Trabalhos Relacionados}
 
@@ -430,10 +408,6 @@ aparelho GMS (Google Mobile Services).
 Em um aparelho GMS, a memorização de senhas ou preenchimento automático de
 senhas oferecida pelo Google não tem relação com esse aplicativo, na verdade
 esse é um recurso do próprio aplicativo do Google.
-
-Para utilizar oduplo fator deautenticação no prórprio serviço do Google,
-é necessário acessar a página de gerenciar a sua conta do Google, procurar
-a opção de segurança.
 
 \subsubsection{Microsoft Authenticator}
 
