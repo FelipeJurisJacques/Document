@@ -109,12 +109,17 @@ minimizar a exposição pessoal, considerando quem terá acesso a elas.
 Quando um usuário acessa um serviço digital, ele faz isso por meio do
 processo de autenticação (login), fornecendo duas informações: uma
 identificação única (telefone, nome ou e-mail) e uma senha secreta.
-É fundamental que a senha seja aleatória e não contenha informações
-que possam ser facilmente memorizadas e principalmente, não deve conter
-informações pessoais, pois isso pode ser descoberto por pessoas
-mal-intencionadas.
-Além disso, informações pessoais podem ser obtidas de várias maneiras,
-como em perfis públicos do usuário.
+
+A senha é a primeira barreira contra um acesso não autorizado.
+Por isso, é fundamental que a senha seja aleatória e sem informações
+pessoais que possam ser facilmente descobertas por outras pessoas ou
+obtidas em perfis públicos do usuário.
+
+Todo o serviço que é bem feito, vai usar um algoritmo de derivação de chave e
+nunca vai salvar as senhas das credenciais de forma aberta.
+Logo, se o mesmo limita o comprimento ou variabilidade de caracteres do cadastro da
+senha, é um grande indicativo de que o serviço não está preocupado com a segurança
+dos dados dos usuários.
 
 \subsection{Multi Fator de Autenticação}
 
@@ -486,15 +491,14 @@ anotações, exportar e importar em formato de plianilha CSV sem criptografia.
 
 O mesmo pop-up do Android utilizado pelo Google pode ser substituido por
 aplicativos de terceiros, como o Microsoft Authenticator, citado anteriormente
-que oferece recursos adicionais para gerenciar senhas, sendo assim um aplicativo
-praticamente completo para a segurança pessoal do usuário, com sincronização em
-nuvem.
-Também é possível adicionar anotações, exportar e importar em formato de
-plianilha CSV sem criptografia.
-O sistema operacional Windows não possui opção nativa ou pré instalada para
-salvar senhas, as senhas gerenciadas por esse aplicativo são as mesmas salvas no
-navegador de internet Microsoft Edge do Windows, que no Windows só funcionam
-dentro do proprio navegador.
+que oferece recursos adicionais para gerenciar senhas.
+Também permite adicionar anotações, exportar e importar em formato de plianilha
+CSV sem criptografia.
+
+No sistema operacional Windows não há opção nativa ou pré instalada para
+salvar senhas, dependendo de programas de terceiros para salvar senhas.
+Navegadores de internet normalmente oferecem uma opção nativa para salvar senhas,
+mas com poucos recursos extras de segurança ou gerenciamento.
 
 KeeWeb é um aplicativo de código aberto que oferece uma interface amigável para
 gerenciar senhas, com maior foco no gerenciamento das anotações.
@@ -506,9 +510,20 @@ O KeeWeb permite salvar as anotações de senhas em formato de arquivos com ou s
 criptografia, os arquivos podem ser exportados localmente ou em nuvens de
 serviços de terceiros em que o usuários tiver preferencia.
 
+Utilizar aplicativos de gerenciamento de senhas, apresentou grande praticidade,
+especialmente para os serviços que não se mantem autenticados, solicitam a
+autenticação com frequencia ou perdem a autenticação por defeito.
+Porém os aplicativos de gerenciamento de senhas e navegadores de internet não
+são perfeitos, em alguns casos, apresnetam o popup sob a caixa de entrada do
+login, senha ou botões.
+Já o KeeWeb, quando não configurado para o mesmo idioma do dispositivo, é
+prejudicado no sistema operacional Android, por ser um aplicativo web progressivo,
+o Google Chrome insiste em traduzir o aplicativo e até mesmo as senhas, tornando
+as senhas inválidas.
+
 \section{Considerações Finais}
 
-A pesquisa revelou que os participantes possuem um nível de conscientização sobre
+A pesquisa revelou que alguns participantes possuem um nível de conscientização sobre
 a importância da segurança digital, demonstrado pelo uso de senhas fortes e pela
 autenticação de dois fatores.
 No entanto, algumas práticas de segurança, como senhas fracas e permanecer
@@ -523,40 +538,30 @@ A memorização de senhas em navegadores de internet pode expor o acesso ao serv
 sem exigir senha.
 Embora a sincronia em nuvem seja suficientemente segura, não é solicitada uma
 senha mestre para liberar a autenticação ou até para visualizar a senha.
-Ambos os casos são escolhidas pelos usuários devido à conveniência sedutora de não
-ter que se preocupar com senhas e pode permitir que quem tenha acesso ao
-dispositivo acesse o serviço, o que é ainda mais inseguro se o dispositivo não
-estiver protegido por um bloqueio de tela.
+Ambos os casos são escolhidas pelos usuários devido à conveniência de não ter que se
+preocupar com senhas e pode permitir que quem tenha acesso ao dispositivo acesse o
+serviço, o que é inseguro se o dispositivo não estiver protegido por um bloqueio de
+tela.
 
-Felizmente, a autenticação em duas etapas é uma camada adicional de segurança que
-pode proteger as contas dos usuários.
-No entanto, essa tecnologia é práticamente restrita a dispositivos moveis.
-Utilizar apenas um dispositivo, com cópias de segurança em nuvem e proteger o mesmo serviço de
-nuvem nesse dispositivo pode ser uma armadilha que não é préviamente avisado aos
-usuários.
-Portanto, é importante possuir uma estrategia de recuperação do cópias de segurança ou possuir
-mais de um dispositivo ao mesmo tempo para autenticação, escolhendo bem o
-aplicativo e os dispositivos para essa situação, do contrário, em caso de perda
-ou roubo do dispositivo, essa camada adicional de segurança pode dificultar o
-acesso do proprio proprietário, principalmente se o usuário apenas utiliza o
-smartfone.
+O duplo fator de autenticação é uma camada adicional de segurança que pode proteger
+as contas dos usuários.
+No entanto, essa tecnologia só está disponível para dispositivos móveis, além das
+chaves físicas, sendo indispensável que todos os usuários realizem cópias de sergurança
+para evitar complicações.
 
-Utilizar aplicativos de gerenciamento de senhas, apresentou grande praticidade,
-especialmente para os serviços que não se mantem autenticados, solicitam a
-autenticação com frequencia ou perdem a autenticação por defeito.
-Porém os aplicativos de gerenciamento de senhas e navegadores de internet não
-são perfeitos, em alguns casos, apresnetam o popup sob a caixa de entrada do
-login, senha ou botões.
-Já o KeeWeb, se não estiver configurado para o mesmo idioma do dispositivo, foi
-prejudicado no sistema operacional Android, por ser um aplicativo web progressivo,
-o Google Chrome insiste em traduzir o aplicativo e até mesmo as senhas, tornando
-as senhas invalidas.
+Embora existam aplicativos e programas variados de segurança pessoal, não é tão simples
+de escolher o aplicativos ou programa mais adequando para o uso pessoal já que a
+complexidade tecnica é um obstáculo.
+Experimentar cada aplicativo ou programa para encontrar o mais adequado exige muito tempo
+e organização.
+Especialmente se tratando de aplicativos ou programas para anotar senhas, há poucas
+opções de referências e transparência dos sistemas operacionais e navegadores de internet
+com opções nativas ou pré instaladas.
 
-Todo o serviço que é bem feito, vai usar um algoritmo de derivação de chave e
-nunca vai salvar a sua a senha de forma aberta.
-Logo, se o mesmo limita o comprimento ou variabilidade de caracteres de sua senha,
-é um grande indicativo de que o serviço não está preocupado com a segurança de
-seus dados.
+Cada estratégia de segurança é uma camada a mais, uma barreira adicionado contra
+ataques. Ao mesmo tempo, cada camada adiciona complexidade, necessitando de anotações,
+cópias de segurança e até aplicativos confiaveis, do contrário, as camadas de segurança
+pode se tornar um obstáculo para o próprio usuário.
 
 \bibliographystyle{sbc}
 \bibliography{references}
