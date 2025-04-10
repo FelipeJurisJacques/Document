@@ -281,10 +281,10 @@ quando linguagens naturais são utilizadas, criando padrões que podem ser
 explorados por atacantes.
 
 A pesquisa de \cite{article:1} conclui que a estratégia mais eficaz para criar senhas
-robustas é a utilização de acrônimos, que aumenta a entropia por caractere em
-aproximadamente 80\%.
-Outras estratégias, como o uso de palavras isoladas, passphrases e o
-método Diceware, mostraram-se menos eficazes.
+robustas é a utilização de acrônimos, que consiste em combinar a primeira letra de
+cada palavra de uma frase, que aumenta a entropia por caractere em aproximadamente 80\%.
+Essa estratégia chega proximo a entropia maxima, é possível melhorar ainda esta
+estratégia se também utilizar algarismos e caracteres não alfanuméricos.
 O estudo destaca a importância de escolher senhas que maximizem o espaço
 de busca para ataques de força bruta, especialmente em sistemas com
 restrições de comprimento.
@@ -303,23 +303,14 @@ digitais na conclusão de seu artigo:
   fracas e, portanto, mais vulneráveis a ataques. \cite{article:1}
 \end{quote}
 
-\cite{article:2} destacam que o estudo em seu artigo "Factorizing 2FA:
-Forensic analysis of two-factor authentication applications" analisou 15
-aplicativos de autenticação de dois fatores (2FA) em diferentes sistemas
-operacionais, incluindo Android, iOS e Windows 10, com foco na análise de
-artefatos forenses deixados por esses aplicativos.
-A pesquisa descobriu que a maioria dos aplicativos armazena informações em
-texto simples ou criptografado/codificado, incluindo chaves secretas,
-timestamps, nomes de contas e endereços de e-mail, o que pode permitir que
-a funcionalidade 2FA seja contornada.
-A descoberta de chaves secretas pode permitir que os examinadores forenses
-gerem um OTP 2FA válido sem o uso do dispositivo original, reduzindo a
-necessidade de manipular diretamente o dispositivo e potencialmente alterar
-os dados.
-O estudo destaca a importância da criptografia na proteção de dados do
-usuário, especialmente em aplicativos 2FA, e sugere a análise de versões
-futuras dos aplicativos e a exploração de outros tipos de autenticação
-multifator.
+A pesquisa forense de \cite{article:2} analisa quinze aplicativos de duplo fator de
+autenticação em diferentes sistemas operacionais, investigando os dados que armazenam
+e como podem ser explorados.
+Os resultados revelam que muitos aplicativos guardam informações confidenciais, como
+chaves secretas e detalhes de contas, frequentemente sem criptografia robusta.
+A descoberta dessas chaves não criptografadas permitiu aos pesquisadores contornar o 
+duplo fator de autenticação, demonstrando uma vulnerabilidade significativa.
+O estudo destaca a necessidade de maior segurança nos aplicativos.
 
 \cite{article:3}, em seu artigo "The many ways to hack 2FA" de argumenta que a
 autenticação de dois fatores (2FA) não é infalível e pode ser facilmente
