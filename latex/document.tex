@@ -114,11 +114,6 @@ A senha é a primeira barreira contra um acesso não autorizado.
 Por isso, é fundamental que a senha seja aleatória e sem informações
 pessoais que possam ser facilmente descobertas ou obtidas.
 
-Existe um site chamado "Have I Been Pwned" \cite{hibp} que permite verificar
-vazamentos de dados.
-Ao verificar nesse site que alguma credêncial foi vazada, é importante mudar
-a senha imediatamente.
-
 \subsection{Multi Fator de Autenticação}
 
 A autenticação multifator (MFA) é uma medida de segurança adicional que
@@ -250,21 +245,51 @@ explorados usuários mal intencionados ou brechas de segurança.
 
 \section{Trabalhos Relacionados}
 
+\subsection{Vazamentos de Dados}
+
 \cite{article:1}, em seu artigo sobre a influência da Lei de Zipf na
-escolha de senhas, analisa a criação de senhas seguras considerando a
-teoria da informação e a lei de Zipf.
+escolha de senhas, relata vários incidentes de vazamento de informações de
+usuários de diversos serviços digitais de muitas empresas durante a história
+recente, muitos dos quais através da apropriação de senhas de usuários.
+
+Vazamentos de dados serviços digitais ocorrem com frequência, por ataques
+cibernéticos.
+Existe um site chamado "Have I Been Pwned" \cite{hibp} que cataloga bilhões de
+credênciais vazadas.
+O site foi criado pelo especialista em segurança Troy Hunt e é uma grande
+referência global para verificar vazamentos de dados.
+
+Um vazamento de dados pode não revelar senhas de um serviço digital, pois muitas
+vezes as senhas são criptografadas por algum algoritmo de derivação de chave.
+\cite{article:1} cita que "o inimigo conhece o sistema", assumindo que o algoritmo
+de derivação de chave seja público, utilizará de ataques de força bruta em dados
+vazados, através de busca exaustiva de todo tipo de combinação possível para
+descobrir o maior número de senhas possíveis.
+
+Uma vez que as senhas são vazadas e descobertas, as credencais de acesso estão
+vulneráveis a ataques.
+Ao ter conhecimento de vazamento de dados ou verificar no site de \cite{hibp} que
+alguma credêncial foi vazada, é importante mudar a senha imediatamente.
+
+\subsection{Avaliação de Segurança de Senhas}
+
+\cite{article:1}, em seu artigo, analisa a criação de senhas seguras considerando
+a teoria da informação e a lei de Zipf.
 A lei de Zipf, que descreve a relação entre a frequência de ocorrência de
 palavras e sua posição em uma lista ordenada, reduz a entropia das senhas
 quando linguagens naturais são utilizadas, criando padrões que podem ser
 explorados por atacantes.
-A pesquisa conclui que a estratégia mais eficaz para criar senhas robustas
-é a utilização de acrônimos, que aumenta a entropia por caractere em
-aproximadamente 80%.
+
+A pesquisa de \cite{article:1} conclui que a estratégia mais eficaz para criar senhas
+robustas é a utilização de acrônimos, que aumenta a entropia por caractere em
+aproximadamente 80\%.
 Outras estratégias, como o uso de palavras isoladas, passphrases e o
 método Diceware, mostraram-se menos eficazes.
 O estudo destaca a importância de escolher senhas que maximizem o espaço
 de busca para ataques de força bruta, especialmente em sistemas com
 restrições de comprimento.
+
+\subsection{Limitações de Segurança em Serviços Digitais}
 
 \cite{article:1}, relata limitações de segurança em algum serviços
 digitais na conclusão de seu artigo:
@@ -314,11 +339,6 @@ O autor conclui enfatizando a importância de discutir
 as vulnerabilidades da 2FA para implementar e usar soluções mais seguras
 e conscientizar administradores e usuários sobre os pontos fortes e fracos
 da 2FA.
-
-O site "Have I Been Pwned" \cite{hibp} foi Criado pelo especialista em segurança
-Troy Hunt, é a principal referência global para verificar vazamentos de dados.
-O site cataloga bilhões de credênciais vazadas e permite que os usuários verifiquem
-se suas informações pessoais foram comprometidas em vazamentos de dados.
 
 \section{Metodologia}
 
