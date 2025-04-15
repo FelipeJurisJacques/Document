@@ -89,21 +89,6 @@ normalmente um identificador unico do usuário como telefone, CPF, nome ou
 e-mail e uma senha que deve ser forte e segura, de conhecimento exclusivo
 do usuário.
 
-\subsection{Segurança de Serviços Digital}
-
-Por mais sofisticados que os serviços digitais possam ser, não existe
-garantias de segurança. É fundamental mitigar os riscos de segurança
-por meio de práticas individuais.
-
-As credênciais de acesso devem ser protegidas para evitar que terceiros
-mal-intencionados as usem para obter vantagens indevidas.
-Deixar credênciais vulneráveis pode expor o usuário a riscos ilimitados,
-como roubo de informações, extorsão, invasão e mais.
-
-Em um cadadstro de conta de usuário é importante fornecer apenas informações
-necessárias e verdadeiras, informando apenas o mínimo necessário para
-minimizar a exposição pessoal, considerando quem terá acesso a elas.
-
 \section{Processo de Autenticação}
 
 Quando um usuário acessa um serviço digital, ele faz isso por meio do
@@ -113,6 +98,8 @@ identificação única (telefone, nome ou e-mail) e uma senha secreta.
 A senha é a primeira barreira contra um acesso não autorizado.
 Por isso, é fundamental que a senha seja aleatória e sem informações
 pessoais que possam ser facilmente descobertas ou obtidas.
+Pois, deixar credênciais vulneráveis pode expor o usuário a riscos ilimitados,
+como roubo de informações, extorsão, invasão e mais.
 
 \subsection{Multi Fator de Autenticação}
 
@@ -166,32 +153,6 @@ Independente do aplicativo a ser usado para armazenar as chaves de
 duplo fator de autenticação, é importante realizar cópias de segurança
 em nuvem ou em arquivo digital para evitar perda de acesso às contas
 de usuário.
-
-\section{Phishing}
-
-Phishing é um tipo de ataque cibernético onde criminosos tentam obter
-vantagem ou obter informações confidenciais, como senhas, informações
-pessoais e até detalhes de cartões de crédito, por meio de comunicações
-fraudulentas.
-Este termo deriva da palavra "fishing", que significa pescar em inglês,
-aludindo à ideia de lançar iscas para capturar vítimas desavisadas.
-
-Os ataques de phishing podem ocorrer através de e-mails, mensagens de
-texto e chamadas telefônicas fraudulentas, serviços online falsos que
-se assemelham muito com os verdadeiros, aplicativos malignos em lojas
-de aplicativos, postagens e propagandas enganosas em redes sociais e
-anúncios fraudulentos de internet, onde os golpistas se passam por
-entidades legítimas para persuadir as pessoas a fornecerem suas informações
-pessoais ou tirar vantagens para realizar ataques ao dispositivo.
-
-A conscientização sobre esses golpes é crucial, pois o conhecimento é a
-primeira linha de defesa contra os ataques cibernéticos.
-É importante estar atento a mensagens suspeitas que solicitam dados
-confidenciais ou contêm links e anexos desconhecidos. Para se proteger,
-verifique a autenticidade das mensagens, não clique em links ou baixe
-anexos de fontes desconhecidas e use soluções de segurança confiáveis.
-Se receber um código de autenticação sem solicitar, não o informe a
-ninguém e altere sua senha, pois pode ser uma tentativa de invasão.
 
 \section{Multiplas Credencais de Acesso}
 
@@ -312,24 +273,38 @@ A descoberta dessas chaves não criptografadas permitiu aos pesquisadores contor
 duplo fator de autenticação, demonstrando uma vulnerabilidade significativa.
 O estudo destaca a necessidade de maior segurança nos aplicativos.
 
-\cite{article:3}, em seu artigo "The many ways to hack 2FA" de argumenta que a
-autenticação de dois fatores (2FA) não é infalível e pode ser facilmente
-contornada.
-A fraqueza central da 2FA reside no fato de que o token de acesso é
-geralmente tratado da mesma forma, independentemente do formato ou tipo de
-autenticação, o que significa que, uma vez obtido o token, o invasor pode
-acessar o recurso protegido da mesma forma que o usuário legítimo.
+\subsection{Ataques de phishing}
 
-\cite{article:3} descreve três métodos gerais para hackear a 2FA, incluindo
-exploração de vulnerabilidades tecnológicas, ataques de engenharia social
-e ataques físicos.
-Além disso, são apresentados exemplos específicos de como a 2FA pode ser
-comprometida, como roubo de cookies, sequestro de assunto, troca de SIM,
-falsificação de SMS, geradores de código duplicados.
-O autor conclui enfatizando a importância de discutir
-as vulnerabilidades da 2FA para implementar e usar soluções mais seguras
-e conscientizar administradores e usuários sobre os pontos fortes e fracos
-da 2FA.
+Phishing é um tipo de ataque cibernético onde criminosos tentam obter
+vantagem ou obter informações confidenciais, como senhas, informações
+pessoais e até detalhes de cartões de crédito, por meio de comunicações
+fraudulentas.
+Este termo deriva da palavra "fishing", que significa pescar em inglês,
+aludindo à ideia de lançar iscas para capturar vítimas desavisadas.
+
+O artigo "The many ways to hack 2FA" de \cite{article:3} explora as vulnerabilidades e
+métodos de burlar o duplo fator de autentiação ou o multifator fator de autentiação,
+apesar de serem consideradas mais seguras que as senhas isoladas.
+Muitas pessoas ainda podem ser vítimas de e-mails de phishing simples, onde um e-mail de
+phishing envia um link fraudulento para um site falso para roubar as credenciais do usuário.
+Essencialmente, o invasor engana o usuário para que ele insira suas credenciais em um site falso.
+
+\cite{article:3} cita que um invasor, conhecendo o e-mail e o número de telefone de um
+usuário, pode abusar das mensagens de recuperação por SMS usadas em alguns serviços digitais
+para multi fator de autenticação.
+O invasor pode enviar mensagens SMS fraudulentas se passando por um provedor de serviços,
+solicitando um código de "reativação" ou "verificação" de conta.
+Se o usuário fornecer o código, o invasor pode usá-lo para realizar autenticação na conta legítima.
+
+Por mais sofisticados que os serviços digitais possam ser, não existe garantias de segurança.
+\cite{article:3} destaca que, embora o multi fator de autenticação aumente a segurança,
+ele não é infalível e pode ser contornado através de técnicas de phishing para roubar
+credenciais ou enganar usuários.
+
+É fundamental mitigar os riscos de segurança por meio de práticas individuais.
+As credênciais de acesso devem ser protegidas para evitar que terceiros
+mal-intencionados as usem para obter vantagens indevidas.
+Cada estratégia de segurança é uma camada a mais, uma barreira adicionado contra ataques.
 
 \section{Metodologia}
 
@@ -573,6 +548,15 @@ Cada estratégia de segurança é uma camada a mais, uma barreira adicionado con
 Ao mesmo tempo, cada camada adiciona complexidade, necessitando de anotações, cópias de
 segurança e até aplicativos confiaveis, do contrário, as camadas de segurança que deviam
 proteger o usuário, pode se tornar um obstáculo para o próprio usuário.
+
+A conscientização sobre esses golpes é crucial, pois o conhecimento é a
+primeira linha de defesa contra os ataques cibernéticos.
+É importante estar atento a mensagens suspeitas que solicitam dados
+confidenciais ou contêm links e anexos desconhecidos. Para se proteger,
+verifique a autenticidade das mensagens, não clique em links ou baixe
+anexos de fontes desconhecidas e use soluções de segurança confiáveis.
+Se receber um código de autenticação sem solicitar, não o informe a
+ninguém e altere sua senha, pois pode ser uma tentativa de invasão.
 
 \bibliographystyle{sbc}
 \bibliography{references}
