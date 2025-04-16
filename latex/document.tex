@@ -282,29 +282,69 @@ fraudulentas.
 Este termo deriva da palavra "fishing", que significa pescar em inglês,
 aludindo à ideia de lançar iscas para capturar vítimas desavisadas.
 
-O artigo "The many ways to hack 2FA" de \cite{article:3} explora as vulnerabilidades e
-métodos de burlar o duplo fator de autentiação ou o multifator fator de autentiação,
-apesar de serem consideradas mais seguras que as senhas isoladas.
-Muitas pessoas ainda podem ser vítimas de e-mails de phishing simples, onde um e-mail de
-phishing envia um link fraudulento para um site falso para roubar as credenciais do usuário.
-Essencialmente, o invasor engana o usuário para que ele insira suas credenciais em um site falso.
+O artigo de \cite{article:3} começa reconhecendo que as senhas sozinhas são cada vez mais
+insuficientes para proteger contas de usuários e dados.
+A crescente adoção do duplo fator de autentiação ou o multifator fator de autentiação, está
+se tornando essencial para a segurança cibernética.
+Apesar dos benefícios, \cite{article:3} destaca que muitas soluções de multifator fator de
+autentiação são erroneamente consideradas invulneráveis.
+Ele argumenta que, com conhecimento e as técnicas certas, o multifator fator de autentiação
+pode ser contornado.
 
-\cite{article:3} cita que um invasor, conhecendo o e-mail e o número de telefone de um
-usuário, pode abusar das mensagens de recuperação por SMS usadas em alguns serviços digitais
-para multi fator de autenticação.
-O invasor pode enviar mensagens SMS fraudulentas se passando por um provedor de serviços,
-solicitando um código de "reativação" ou "verificação" de conta.
-Se o usuário fornecer o código, o invasor pode usá-lo para realizar autenticação na conta legítima.
+\cite{article:3} descreve que os invasores exploram vulnerabilidades no software, protocolos,
+infraestrutura da solução do multifator fator de autentiação, engenharia social e até roubo
+de dispositivos:
+\begin{itemize}
+  \item Roubo de Cookies: Um dos métodos mais comuns envolve o envio de e-mails de phishing
+  que simulam uma página de autenticação legítima.
+  Se o usuário inserir suas credenciais e um código do duplo fator de autentiação, o invasor
+  pode roubar o cookie de sessão e usá-lo para acessar a conta sem precisar do código
+  novamente.
+  \item Sequestro de Assunto (Subject Hijacking): Em algumas soluções de multifator fator de
+  autentiação, o atacante pode modificar o identificador do assunto, permitindo que ele
+  acesse contas ou privilégios associados a um usuário diferente.
+  \item Troca de SIM (SIM Swap): Os atacantes podem enganar as operadoras de telefonia móvel
+  para transferir o número de telefone da vítima para um cartão SIM sob seu controle,
+  permitindo que interceptem códigos de duplo fator de autentiação enviados por SMS.
+  \item Mensagens de Recuperação de SMS Forjadas (Forged SMS recovery messages): Os
+  atacantes podem usar informações básicas (como e-mail e número de telefone) para enviar
+  mensagens SMS fraudulentas se passando por provedores de serviços, solicitando um código de
+  recuperação ou induzindo o usuário a fornecer informações confidenciais.
+  \item Duplicação de Geradores de Código (Duplicate code generators): Embora consideradas
+  mais seguras, até mesmo soluções baseadas em TOTP (Time-based One-Time Password) podem ser
+  vulneráveis se a "seed" secreta usada para gerar os códigos for comprometida ou se
+  existirem vulnerabilidades na implementação do software ou  applicativo.
+  \item Sociais (engenharia social contra o usuário ou suporte): Manipulam indivíduos para
+  que revelem seus códigos de duplo fator de autenticação ou concedam acesso não autorizado.
+  O exemplo do e-mail de phishing para roubo de cookies também se enquadra nessa categoria,
+  pois explora a falta de discernimento do usuário.
+  Enganar o suporte técnico para que desabilite o multi fator de autenticação ou forneça
+  códigos de acesso também é uma tática de engenharia social.
+  \item Físicos (roubo ou duplicação de um fator físico): Envolvem a obtenção física do
+  dispositivo usado para o multi fator de autentiação (por exemplo, um smartfone com um
+  aplicativo autenticador) ou a duplicação de um token físico (se aplicável).
+  O roubo de um smartphone com um aplicativo autenticador ativo permite que o invasor acesse
+  contas protegidas por multi fator de autentiação.
+  A duplicação de impressões digitais (embora tecnicamente difícil) ou outros fatores
+  biométricos também representa uma ameaça.
+\end{itemize}
 
-Por mais sofisticados que os serviços digitais possam ser, não existe garantias de segurança.
-\cite{article:3} destaca que, embora o multi fator de autenticação aumente a segurança,
-ele não é infalível e pode ser contornado através de técnicas de phishing para roubar
-credenciais ou enganar usuários.
+No entanto, \cite{article:3} enfatiza que, para mitigar os riscos associados aos ataques à
+ao multi fator de autentiação, é crucial educar os administradores e usuários finais sobre
+as várias maneiras pelas quais o multi fator de autentiação pode ser hackeado e sobre as
+melhores práticas para se protegerem.
 
-É fundamental mitigar os riscos de segurança por meio de práticas individuais.
-As credênciais de acesso devem ser protegidas para evitar que terceiros
-mal-intencionados as usem para obter vantagens indevidas.
-Cada estratégia de segurança é uma camada a mais, uma barreira adicionado contra ataques.
+O artigo \cite{article:3} desmistifica a ideia de que a autenticação de dois fatores e
+multifator é uma solução de segurança infalível.
+Ao detalhar várias técnicas que os atacantes podem usar para contornar o multi fator de
+autenticação, o autor destaca a necessidade de uma compreensão mais profunda das
+vulnerabilidades inerentes a essas tecnologias e dos vetores de ataque.
+A principal mensagem é que a implementação do multi fator de autenticação deve ser
+acompanhada por uma forte conscientização e educação dos usuários para que eles possam
+reconhecer e evitar as diversas táticas de engenharia social e outros métodos de ataque.
+Em última análise, embora o multi fator de autenticação represente uma melhoria
+significativa em relação à autenticação de fator único, a vigilância e a educação
+contínua são essenciais para garantir a segurança das contas e informações.
 
 \section{Metodologia}
 
@@ -488,15 +528,53 @@ mas com poucos recursos extras de segurança ou gerenciamento.
 Infelismente os navegadores de internet não solicitam uma senha mestre para liberar
 a autenticação ou até mesmo para visualizar a senha.
 
-KeeWeb é um aplicativo de código aberto que oferece uma interface amigável para
-gerenciar senhas, com maior foco no gerenciamento das anotações.
+\subsubsection{KeePass}
+
+O KeePass é um aplicativo ou programa de código aberto para computadores pessoais.
+Diferente dos aplicativos citados anteriormente, o KeePass não é um aplicativo
+para dispositivos móveis como tablets ou smartfone, mas sim um aplicativo desktop,
+que pode ser instalado em qualquer dispositivo com sistema operacional Windows.
+Existem também versões para outros sistemas operacionais como Linux, Mac OS e até
+BSD, desenvolvido por contribuidores não oficiais.
+
+Por padrão o KeePass é em inglês, necessitando de plugins de tradução para outras
+idiomas.
+Embora a interface aparente ser para computadores mais antigos, não se trata de um
+aplicativo desatualizado, mas sim um aplicativo com uma interface única, compatível
+com qualquer sistema operacional recente.
+Além de que a interface é amigável para gerenciar senhas, com maior foco no gerenciamento
+das anotações e com sugestões inteligentes de senhas fortes.
+Porém, sem integração com o sistema operacional, ou seja, nele, o usuário vai apenas
+realizar anotações, sem possibilidade de auto completar senhas em processos de autentiação
+e sem sincronização com outros dispositivos.
+
+O KeePass permite salvar as senhas em formato de arquivos com criptografia, os arquivos
+são salvos localmente pelo qual o usuário deve se compromenter em salvar em um local
+seguro e manter cópias de segurança em outros locais.
+Entretanto, o próprio aplicativo oferece e sugere a possibilidade de imprimir uma cópia
+de segurança do arquivo de senhas.
+
+\subsubsection{KeeWeb}
+
+No site oficial de KeePass exístem vários aplicativos que são contribuições não oficiais
+de KeePass, como KeeWeb que é um aplicativo de código aberto compatível com KeePass, em
+que é possível utilizar o mesmo banco de dados do KeePass.
 Diferente dos aplicativos citados anteriormente, o KeeWeb não é um aplicativo
-nativo, mas sim um aplicativo web progressivo, que pode ser instalado em qualquer
-dispositivo com navegador de internet, porém, sem integração com o sistema
-operacional, ou seja, nele, o usuário vai apenas realizar anotações.
-O KeeWeb permite salvar as anotações de senhas em formato de arquivos com ou sem
-criptografia, os arquivos podem ser exportados localmente ou em nuvens de
-serviços de terceiros em que o usuários tiver preferencia.
+nativo, mas sim um aplicativo web progressivo, multi plataforma, que pode ser instalado
+em qualquer dispositivo com navegador de internet.
+Assim como KeePass, não há integração com o sistema operacional para auto completar senhas
+em processo de autenticação.
+
+Por padrão o KeeWeb é em inglês, também necessitando de plugins de tradução para outros
+idiomas, porém com a praticidade de poder instalar os plugins diretamente pelo aplicativo.
+O KeeWeb apresenta uma interface moderna e amigável para gerenciar senhas, com o mesmo foco
+no gerenciamento das anotações assim como no KeePass.
+
+O KeeWeb permite salvar as anotações de senhas com ou sem criptografia, os arquivos ficam
+dentro da memoria do navegador de internet e podem ser exportados localmente em formato de
+arquivos.
+Há um diferencial nesse aplicativo que permite exportar os arquivos em nuvens de serviços
+de terceiros em que o usuários tiver preferencia.
 
 Utilizar aplicativos de gerenciamento de senhas, apresentou grande praticidade,
 especialmente para os serviços que não se mantem autenticados, solicitam a
@@ -544,6 +622,7 @@ Logo, se o mesmo limita o comprimento ou variabilidade de caracteres do cadastro
 senha, é um grande indicativo de que o serviço não está preocupado com a segurança
 dos dados dos usuários.
 
+Por mais sofisticados que os serviços digitais possam ser, não existe garantias de segurança.
 Cada estratégia de segurança é uma camada a mais, uma barreira adicionado contra ataques.
 Ao mesmo tempo, cada camada adiciona complexidade, necessitando de anotações, cópias de
 segurança e até aplicativos confiaveis, do contrário, as camadas de segurança que deviam
