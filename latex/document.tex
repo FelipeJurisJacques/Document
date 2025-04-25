@@ -74,8 +74,8 @@ Conferences that publish just abstracts ask for \textbf{one}-page texts.
 
 Qualquer serviço digital que exija autenticidade para identificar usuários
 utiliza credênciais de acesso.
-Embora cada serviço tenha credênciais únicas, eles compartilham padrões
-comuns que os usuários conhecem.
+Embora cada serviço tenha credênciais únicas, eles compartilham alguns
+padrões comuns que os usuários conhecem.
 Além disso, os serviços digitais têm contratos que os usuários devem aceitar,
 mas a tecnologia por trás da segurança não é transparente para os usuários.
 No entanto, é responsabilidade do usuário operar corretamente e respeitar
@@ -93,7 +93,7 @@ do usuário.
 
 Quando um usuário acessa um serviço digital, ele faz isso por meio do
 processo de autenticação (login), fornecendo duas informações: uma
-identificação única (telefone, nome ou e-mail) e uma senha secreta.
+identificação única (cpf, telefone, nome ou e-mail) e uma senha secreta.
 
 A senha é a primeira barreira contra um acesso não autorizado.
 Por isso, é fundamental que a senha seja aleatória e sem informações
@@ -103,56 +103,42 @@ como roubo de informações, extorsão, invasão e mais.
 
 \subsection{Multi Fator de Autenticação}
 
-A autenticação multifator (MFA) é uma medida de segurança adicional que
+O multi fator de autenticação (MFA) é uma medida de segurança adicional que
 exige dois ou mais fatores de verificação para acessar uma conta ou
-recurso online.
-Isso aumenta a dificuldade de acesso não autorizado, pois mesmo com a
-senha, o atacante precisaria de fatores adicionais, como um código
+recurso online, comum em serviços digitais, como bancos, redes sociais e
+sistemas corporativos.
+Isso aumenta a dificuldade de acesso não autorizado, fornecendo uma camada
+adicional de segurança contra roubo de identidade e fraude cibernética, pois
+mesmo com a senha, o atacante precisaria de fatores adicionais, como um código
 enviado ao smartfone ou e-mail, uma impressão digital ou outro tipo de
 verificação adicional.
-
-A MFA se tornou uma prática padrão em serviços digitais, como bancos,
-redes sociais e sistemas corporativos, fornecendo uma camada adicional
-de segurança contra roubo de identidade e fraude cibernética.
-Porém, não existe um padrão de MFA, cada serviço digital tem suas
-próprias políticas de segurança.
 
 \subsection{Duplo Fator de Autenticação}
 
 O duplo fator de autenticação (2FA), autenticação em dois fatores (ADF) ou
-até mesmo verificação em duas etapas (TFA) é uma medida de segurança
-adicional que exige um segundo fator além da senha, como um código enviado
-ao smartfone ou um dispositivo token (token de hardware).
-Isso torna mais difícil para os atacantes acessarem contas online, mesmo
-que eles obtenham a senha.
+até mesmo verificação em duas etapas (TFA) é um tipo comum de memdia adicional
+de segurança de multi fator de autentiação (MFA).
+Os serviços digitais que possuem o duplo fator de autentiação, normalmente
+utilizam uma chave baseada em OTP (One-Time Password), que exige um segundo fator
+além da senha, um código único que é gerado por um aplicativo no smartfone ou um
+dispositivo token (token de hardware).
+Isso torna mais difícil para os atacantes acessarem, pois mesmo que eles
+obtenham a senha, um novo código OTP será exigido.
 
-É possível usar diversos dispositivos simultâneos para armazenar as chaves
-de duplo fator de autenticação e é indispensável realizar cópias de
-segurança em nuvem ou arquivo digital.
-No entanto, alguns serviços não oferecem o duplo fator de autenticação ou
-exigem aplicativos proprietários, então é importante estar atento a
-política de segurança e recursos de recuperação de acesso de contas.
+Chaves baseadas em OTP para o duplo fator de autentiação permitem utilizar mais
+de um dispositivo e realizar cópias de segurança.
+Mas nem todo o serviço digital oferece o duplo fator de autenticação, ou
+mesmo esse tipo específico de multi fator de autenticação, então é importante
+estar atento a política de segurança e recursos de recuperação de acesso de contas.
 
-Muitos serviços online oferecem o duplo fator de autenticação como opção
-para aumentar a segurança dos usuários.
-Ativar o duplo fator de autenticação é uma etapa importante para proteger
-informações pessoais e é recomendável habilitá-lo sempre.
-
-Um uso comun do duplo fator de autenticação é por meio do smartfone,
-utilizando um aplicativo de autenticação de dois fatores para gerar
-códigos de autenticação em tempo real sem conexão com a internet.
-Embora cada serviço possua maneiras diferentes de ativar o duplo fator
-de autenticação, normalmente é necessário acessar a configuração de
-segurança da conta do usuário, procurar a opção de ativar o duplo fator
-de autenticação ou algo relacionado ao termo.
-Será apresendao um código QR para ser fotografado pelo aplicativo no
-smartfone, em seguida será necessário digitar o código gerado pelo
-aplicativo para ativar o duplo fator de autenticação.
-
-Independente do aplicativo a ser usado para armazenar as chaves de
-duplo fator de autenticação, é importante realizar cópias de segurança
-em nuvem ou em arquivo digital para evitar perda de acesso às contas
-de usuário.
+O smartfone pode ser utilizado como um dispositivo de autenticação por meio de um
+aplicativo de preferencia do usuário, para gerar os códigos baseados em chaves OTP.
+Para utilizar esse tipo de autenticação no serviço digital que ofereça essa opção,
+é necessário, procurar pela configuração de segurança da conta do usuário e procurar
+a opção de ativar o duplo fator de autenticação ou algo relacionado ao termo.
+Será apresendao um código QR para ser fotografado pelo aplicativo no smartfone,
+em seguida será necessário digitar o código gerado pelo aplicativo para ativar o
+duplo fator de autenticação.
 
 \section{Multiplas Credencais de Acesso}
 
