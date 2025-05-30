@@ -19,7 +19,10 @@
 \usepackage{graphicx,url}
 
 \usepackage{pgf-pie}
-\usepackage{tikz}  
+\usepackage{tikz}
+\usepackage{placeins}
+\usepackage{pgfplots}
+\usepackage{xcolor}
 
 \usepackage[brazil]{babel}   
 \usepackage[utf8]{inputenc}  
@@ -345,11 +348,11 @@ operacionais Android e Windows.
 
 \subsection{Pesquisa de Campo}
 
-A pesquisa sobre hábitos e percepções relacionadas a senhas, autenticação de dois
-fatores e segurança digital teve 17 respostas.
-É possível extrair de 17 respostas individuais um resumo consolidado de uma pesquisa
-sobre o comportamento e a confiança dos usuários em relação às suas credenciais
-digitais e à segurança dos serviços \textit{online}.
+O formulário da pesquisa foi configurado para ser anônimo, preservando a segurança dos
+dos usuários.
+Dessa forma, permitiu-se obter informações pessoais de hábitos, percepções e confiança
+dos usuários em relação a senhas, autenticação de dois fatores e segurança digital de
+17 intevistados.
 
 As respostas revelam uma variedade de práticas de gerenciamento de senhas e níveis
 de uso do duplo fator de autenticação.
@@ -361,23 +364,31 @@ positivas.
 
 \subsubsection{Força das Senhas}
 
-Os entrevistados utilizam diferentes estratégias para criar senhas.
+A primeira pergunta do formulário perguntou aos usuários sobre a força de suas senhas.
+Como mostra a figura \ref{fig:resposta_1} em que apresenta a distribuição das
+respostas para a pergunta "Você usa senhas fortes?".
 
+\begin{figure}[!htbp]
+\centering
 \begin{tikzpicture}
 \pie[
-    text=legend,
+    text=inside,
     sum=auto,
-    radius=3,
+    radius=2,
     after number=\%,
     color={blue!20, red!20, green!20, yellow!20}
 ]{
-    35/6 respostas,
-    18/3 respostas,
-    18/3 respostas,
-    29/5 respostas
+    35/,
+    18/,
+    18/,
+    29/
 }
 \end{tikzpicture}
+\caption{Primeira pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+\label{fig:resposta_1}
+\end{figure}
 
+\FloatBarrier
 \begin{itemize}
   \item 35\% utilizam senhas "muito grandes e totalmente aleatórias";
   \item 18\% utilizam "frases longas e criativas para usar como senha";
@@ -393,6 +404,56 @@ A maioria dos entrevistados indica vivência com tecnologia "Mais de 10 anos" ou
 10 anos".
 Vários entrevistados trabalham na área de tecnologia ou estudam na área relacionada,
 indicando um potencial maior conhecimento sobre segurança.
+
+\begin{figure}[!htbp]
+\centering
+
+\begin{tikzpicture}
+\begin{axis}[
+    title={Vivência com Tecnologia},
+    width=12cm,
+    height=8cm,
+    ybar stacked,
+    bar width=1.0cm,
+    enlargelimits=0.15,
+    legend style={
+        at={(0.5,-0.2)},
+        anchor=north,
+        legend columns=4
+    },
+    ylabel={Porcentagem (\%)},
+    symbolic x coords={Não tem vivência, Até 5 anos, Até 10 anos, Mais de 10 anos},
+    xtick=data,
+    nodes near coords,
+    nodes near coords align={vertical},
+    every node near coord/.style={
+        font=\tiny,
+        color=black
+    }
+]
+ 
+\addplot [fill=blue!30] coordinates {
+    (Não tem vivência, 5.9) (Até 5 anos, 29.4) (Até 10 anos, 35.3) (Mais de 10 anos, 29.4)
+};
+\addplot [fill=red!30] coordinates {
+    (Não tem vivência, 11.8) (Até 5 anos, 17.6) (Até 10 anos, 41.2) (Mais de 10 anos, 29.4)
+};
+\addplot [fill=green!30] coordinates {
+    (Não tem vivência, 23.5) (Até 5 anos, 76.5)
+};
+
+\legend{
+  Trabalha,
+  Estuda,
+  Utiliza
+}
+\end{axis}
+\end{tikzpicture}
+\caption{Segunda pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+\label{fig:resposta_2}
+\end{figure}
+
+\FloatBarrier
 
 \subsubsection{Memorização de Acessos em Navegadores}
 
