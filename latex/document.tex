@@ -18,6 +18,9 @@
 
 \usepackage{graphicx,url}
 
+\usepackage{pgf-pie}
+\usepackage{tikz}  
+
 \usepackage[brazil]{babel}   
 \usepackage[utf8]{inputenc}  
      
@@ -360,11 +363,26 @@ positivas.
 
 Os entrevistados utilizam diferentes estratégias para criar senhas.
 
+\begin{tikzpicture}
+\pie[
+    text=legend,
+    sum=auto,
+    radius=3,
+    after number=\%,
+    color={blue!20, red!20, green!20, yellow!20}
+]{
+    35/6 respostas,
+    18/3 respostas,
+    18/3 respostas,
+    29/5 respostas
+}
+\end{tikzpicture}
+
 \begin{itemize}
-  \item 35\% (6 respostas) utilizam senhas "muito grandes e totalmente aleatórias";
-  \item 18\% (3 respostas) utilizam "frases longas e criativas para usar como senha";
-  \item 18\% (3 respostas) preferem "senhas simples sempre que possível";
-  \item 29\% (5 respostas) utilizam "informações pessoais como senha para nunca esquecer".
+  \item 35\% utilizam senhas "muito grandes e totalmente aleatórias";
+  \item 18\% utilizam "frases longas e criativas para usar como senha";
+  \item 18\% preferem "senhas simples sempre que possível";
+  \item 29\% utilizam "informações pessoais como senha para nunca esquecer".
 \end{itemize}
 
 \subsubsection{Vivência com Tecnologia}
