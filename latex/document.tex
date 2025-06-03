@@ -369,113 +369,189 @@ Como mostra a figura \ref{fig:resposta_1} em que apresenta a distribuição das
 respostas para a pergunta "Você usa senhas fortes?".
 
 \begin{figure}[!htbp]
-\centering
-\begin{tikzpicture}
-\pie[
-    text=inside,
-    sum=auto,
-    radius=2,
-    after number=\%,
-    color={blue!20, red!20, green!20, yellow!20}
-]{
-    35/,
-    18/,
-    18/,
-    29/
-}
-\end{tikzpicture}
-\caption{Primeira pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
-\label{fig:resposta_1}
+  \centering
+  \caption*{\normalfont Força das Senhas}
+  \begin{tikzpicture}
+  \pie[
+      text=inside,
+      sum=auto,
+      radius=2,
+      after number=\%,
+      color={blue!20, red!20, green!20, yellow!20}
+  ]{
+      35/,
+      18/,
+      18/,
+      29/
+  }
+  \end{tikzpicture}
+  \caption{Primeira pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+  \label{fig:resposta_1}
 \end{figure}
 
 \FloatBarrier
 \begin{itemize}
-  \item 35\% utilizam senhas "muito grandes e totalmente aleatórias";
-  \item 18\% utilizam "frases longas e criativas para usar como senha";
-  \item 18\% preferem "senhas simples sempre que possível";
-  \item 29\% utilizam "informações pessoais como senha para nunca esquecer".
+  \item 35\% utilizam senhas muito grandes e totalmente aleatórias;
+  \item 18\% utilizam frases longas e criativas para usar como senha;
+  \item 18\% preferem senhas simples sempre que possível;
+  \item 29\% utilizam informações pessoais como senha para nunca esquecer.
 \end{itemize}
 
 \subsubsection{Vivência com Tecnologia}
 
-A maioria dos entrevistados possui uma vivência considerável com a tecnologia, seja
-através de estudo, trabalho ou uso geral.
-A maioria dos entrevistados indica vivência com tecnologia "Mais de 10 anos" ou "Até
-10 anos".
+A segunda pergunta do formulário perguntou aos usuários sobre a vivência com a técnologia.
+Como mostra a figura \ref{fig:resposta_2} em que apresenta a distribuição das
+respostas para a pergunta "Qual sua vivência com a tecnologia?".
 Vários entrevistados trabalham na área de tecnologia ou estudam na área relacionada,
 indicando um potencial maior conhecimento sobre segurança.
 
 \begin{figure}[!htbp]
-\centering
+  \centering
 
-\begin{tikzpicture}
-\begin{axis}[
-    title={Vivência com Tecnologia},
-    width=12cm,
-    height=8cm,
-    ybar stacked,
-    bar width=1.0cm,
-    enlargelimits=0.15,
-    legend style={
-        at={(0.5,-0.2)},
-        anchor=north,
-        legend columns=4
-    },
-    ylabel={Porcentagem (\%)},
-    symbolic x coords={Não tem vivência, Até 5 anos, Até 10 anos, Mais de 10 anos},
-    xtick=data,
-    nodes near coords,
-    nodes near coords align={vertical},
-    every node near coord/.style={
-        font=\tiny,
-        color=black
-    }
-]
- 
-\addplot [fill=blue!30] coordinates {
-    (Não tem vivência, 5.9) (Até 5 anos, 29.4) (Até 10 anos, 35.3) (Mais de 10 anos, 29.4)
-};
-\addplot [fill=red!30] coordinates {
-    (Não tem vivência, 11.8) (Até 5 anos, 17.6) (Até 10 anos, 41.2) (Mais de 10 anos, 29.4)
-};
-\addplot [fill=green!30] coordinates {
-    (Não tem vivência, 23.5) (Até 5 anos, 76.5)
-};
+  \begin{tikzpicture}
+  \begin{axis}[
+      title={Vivência com Tecnologia},
+      width=12cm,
+      height=8cm,
+      ybar stacked,
+      bar width=1.0cm,
+      enlargelimits=0.15,
+      legend style={
+          at={(0.5,-0.2)},
+          anchor=north,
+          legend columns=4
+      },
+      ylabel={Porcentagem (\%)},
+      symbolic x coords={Não tem vivência, Até 5 anos, Até 10 anos, Mais de 10 anos},
+      xtick=data,
+      nodes near coords,
+      nodes near coords align={vertical},
+      every node near coord/.style={
+          font=\tiny,
+          color=black
+      }
+  ]
+  
+  \addplot [fill=blue!30] coordinates {
+      (Não tem vivência, 5.9) (Até 5 anos, 29.4) (Até 10 anos, 35.3) (Mais de 10 anos, 29.4)
+  };
+  \addplot [fill=red!30] coordinates {
+      (Não tem vivência, 11.8) (Até 5 anos, 17.6) (Até 10 anos, 41.2) (Mais de 10 anos, 29.4)
+  };
+  \addplot [fill=green!30] coordinates {
+      (Não tem vivência, 23.5) (Até 5 anos, 76.5)
+  };
 
-\legend{
-  Trabalha,
-  Estuda,
-  Utiliza
-}
-\end{axis}
-\end{tikzpicture}
-\caption{Segunda pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
-\label{fig:resposta_2}
+  \legend{
+    Trabalha,
+    Estuda,
+    Utiliza
+  }
+  \end{axis}
+  \end{tikzpicture}
+  \caption{Segunda pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+  \label{fig:resposta_2}
 \end{figure}
 
 \FloatBarrier
 
 \subsubsection{Memorização de Acessos em Navegadores}
 
-A maioria dos entrevistados opta por digitar suas senhas completas e permanecer autenticados.
+A terceira pergunta do formulário perguntou aos usuários sobre a funcionalidade presente nos
+navegadores de internet, que permitem a memorização de acessos, evitando o processo de
+autenticação toda vez que o usuário acessa um site.
+Como mostra a figura \ref{fig:resposta_3} em que apresenta a distribuição das
+respostas para a pergunta "Você memoriza seu acessos em navegadores de internet?".
 
+\begin{figure}[!htbp]
+  \centering
+  \caption*{\normalfont Memorização de Acessos em Navegadores}
+  \begin{tikzpicture}
+  \pie[
+      text=inside,
+      sum=auto,
+      radius=2,
+      after number=\%,
+      color={blue!20, red!20, green!20, yellow!20}
+  ]{
+      41/,
+      59/
+  }
+  \end{tikzpicture}
+  \caption{Terceira pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+  \label{fig:resposta_3}
+\end{figure}
+
+\FloatBarrier
 \begin{itemize}
-  \item 59\% (10 respostas) digitam suas senhas "uma única vez e permaneço autenticado";
-  \item 41\% (7 respostas) permanecem autenticados "apenas para o básico".
+  \item 59\% preferem digitar senhas uma única vez e permaneço autenticado;
+  \item 41\% preferem permanecer autenticado apenas para o básico;
+  \item 0\% preferem sempre digitar senhas, de preferência em aba anônima.
 \end{itemize}
 
 \subsubsection{Utilização do Duplo Fator de Autenticação}
 
-A maioria dos entrevistados utiliza o duplo faltor de autenticação em alguma forma.
-Google Authenticator e Microsoft Authenticator são os aplicativos de 2FA mais utilizados.
+A quarta pergunta do formulário perguntou aos usuários sobre o duplo fator de autenticação.
+Como mostra a figura \ref{fig:resposta_4} em que apresenta a distribuição das
+respostas para a pergunta "Você utiliza autenticação em 2 fatores?".
 
-\begin{itemize}
-  \item A maioria das respostas para a pergunta 4 indicam "Utilizo se necessário" ou
-  "Sempre utilizo" para SMS e Aplicativo no celular/2FA;
-  \item Há uma menor utilização do dispositivo físico 2FA;
-  \item 12 respostas indicam uso do Google Authenticator;
-  \item 6 respostas indicam uso do Microsoft Authenticator.
-\end{itemize}
+\begin{figure}[!htbp]
+  \centering
+
+  \begin{tikzpicture}
+  \begin{axis}[
+      title={Utilização do Duplo Fator de Autenticação},
+      width=14cm,
+      height=8cm,
+      ybar stacked,
+      bar width=1.0cm,
+      enlargelimits=0.15,
+      legend style={
+          at={(0.5,-0.2)},
+          anchor=north,
+          legend columns=5
+      },
+      ylabel={Porcentagem (\%)},
+      symbolic x coords={Não utiliza, Evita utilizar, Utiliza se necessário, Sempre utiliza},
+      xtick=data,
+      nodes near coords,
+      nodes near coords align={vertical},
+      every node near coord/.style={
+          font=\tiny,
+          color=black
+      }
+  ]
+  
+  \addplot [fill=blue!30] coordinates {
+      (Não utiliza, 29.4) (Evita utilizar, 11.8) (Utiliza se necessário, 52.9) (Sempre utiliza, 5.9)
+  };
+  \addplot [fill=red!30] coordinates {
+      (Não utiliza, 11.8) (Evita utilizar, 0.0) (Utiliza se necessário, 52.9) (Sempre utiliza, 35.3)
+  };
+  \addplot [fill=green!30] coordinates {
+      (Não utiliza, 17.6) (Evita utilizar, 0.0) (Utiliza se necessário, 64.7) (Sempre utiliza, 17.6)
+  };
+  \addplot [fill=yellow!30] coordinates {
+      (Não utiliza, 17.6) (Evita utilizar, 5.9) (Utiliza se necessário, 58.8) (Sempre utiliza, 17.6)
+  };
+  \addplot [fill=orange!30] coordinates {
+      (Não utiliza, 70.6) (Evita utilizar, 11.8) (Utiliza se necessário, 17.6) (Sempre utiliza, 0.0)
+  };
+
+  \legend{
+    SMS,
+    E-mail,
+    Aplicativo no celular,
+    Aplicativo 2FA,
+    Dispositivo físico 2FA
+  }
+  \end{axis}
+  \end{tikzpicture}
+  \caption{Quarta pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+  \label{fig:resposta_4}
+\end{figure}
+
+\FloatBarrier
 
 \subsubsection{Gerenciamento de Senhas e Credenciais}
 
