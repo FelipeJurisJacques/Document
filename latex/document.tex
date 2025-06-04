@@ -230,9 +230,9 @@ A descoberta dessas chaves não criptografadas permitiu aos pesquisadores contor
 duplo fator de autenticação, demonstrando uma vulnerabilidade significativa.
 O estudo destaca a necessidade de maior segurança nos aplicativos.
 
-\subsection{Ataques de phishing}
+\subsection{Ataques de \textit{phishing}}
 
-Phishing é um tipo de ataque cibernético onde criminosos tentam obter
+\textit{Phishing} é um tipo de ataque cibernético onde criminosos tentam obter
 vantagem ou obter informações confidenciais, como senhas, informações
 pessoais e até detalhes de cartões de crédito, por meio de comunicações
 fraudulentas.
@@ -248,12 +248,12 @@ autenticação são erroneamente consideradas invulneráveis.
 Ele argumenta que, com conhecimento e as técnicas certas, o multifator fator de autenticação
 pode ser contornado.
 
-\cite{article:3} descreve que os invasores exploram vulnerabilidades no software, protocolos,
-infraestrutura da solução do multifator fator de autenticação, engenharia social e até roubo
-de dispositivos:
+\cite{article:3} descreve que os invasores exploram vulnerabilidades no \textit{software},
+protocolos, infraestrutura da solução do multifator fator de autenticação, engenharia social
+e até roubo de dispositivos:
 \begin{itemize}
-  \item Roubo de \textit{Cookies}: Um dos métodos mais comuns envolve o envio de e-mails de phishing
-  que simulam uma página de autenticação legítima.
+  \item Roubo de \textit{Cookies}: Um dos métodos mais comuns envolve o envio de e-mails de
+  \textit{phishing} que simulam uma página de autenticação legítima.
   Se o usuário inserir suas credenciais e um código do duplo fator de autenticação, o invasor
   pode roubar o cookie de sessão e usá-lo para acessar a conta sem precisar do código
   novamente.
@@ -270,10 +270,10 @@ de dispositivos:
   \item Duplicação de Geradores de Código (\textit{Duplicate code generators}): Embora consideradas
   mais seguras, até mesmo soluções baseadas em TOTP (\textit{Time-based One-Time Password}) podem ser
   vulneráveis se a "\textit{seed}" secreta usada para gerar os códigos for comprometida ou se
-  existirem vulnerabilidades na implementação do software ou  applicativo.
+  existirem vulnerabilidades na implementação do \textit{software} ou  applicativo.
   \item Sociais (engenharia social contra o usuário ou suporte): Manipulam indivíduos para
   que revelem seus códigos de duplo fator de autenticação ou concedam acesso não autorizado.
-  O exemplo do e-mail de phishing para roubo de cookies também se enquadra nessa categoria,
+  O exemplo do e-mail de \textit{phishing} para roubo de cookies também se enquadra nessa categoria,
   pois explora a falta de discernimento do usuário.
   Enganar o suporte técnico para que desabilite o multi fator de autenticação ou forneça
   códigos de acesso também é uma tática de engenharia social.
@@ -553,59 +553,237 @@ respostas para a pergunta "Você utiliza autenticação em 2 fatores?".
 
 \FloatBarrier
 
+\subsubsection{Aplicativo para Duplo Fator de Autenticação}
+
+Para processos de duplo fator de autenticação baseado em OTP, a quinta pergunta
+do formulário perguntou aos usuários se utilizam algum aplicativo para gerenciar
+os códigos OTP.
+Como mostra a figura \ref{fig:resposta_5} em que apresenta a distribuição das
+respostas para a pergunta "Qual aplicativo de autenticação em 2 fatores você utiliza?".
+
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            title={Aplicativo para Duplo Fator de Autenticação},
+            xtick=\empty,
+            xlabel={},
+            ylabel={Porcentagem (\%)},
+            symbolic x coords={,},
+            xtick=data,
+            width=14cm,
+            height=8cm,
+            bar width=1.0cm,
+            legend style={at={(0.5,-0.2)}, anchor=north, legend columns=2}
+        ]
+            \addplot[fill=orange!30] coordinates {(, 0)};
+            \addlegendentry{Duo}
+
+            \addplot[fill=blue!30] coordinates {(, 4)};
+            \addlegendentry{Aegis}
+
+            \addplot[fill=brown!30] coordinates {(, 0)};
+            \addlegendentry{FreeOTP}
+
+            \addplot[fill=red!30] coordinates {(, 50)};
+            \addlegendentry{Google Autenticator}
+
+            \addplot[fill=green!30] coordinates {(, 33)};
+            \addlegendentry{Microssoft Autenticator}
+
+            \addplot[fill=yellow!30] coordinates {(, 4)};
+            \addlegendentry{Outro}
+
+            \addplot[fill=pink!30] coordinates {(, 0)};
+            \addlegendentry{Não utiliza}
+
+            \addplot[fill=red!30] coordinates {(, 8)};
+            \addlegendentry{Desconhece autenticação em 2 fatores}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Quinta pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+    \label{fig:resposta_5}
+\end{figure}
+
+\FloatBarrier
+
 \subsubsection{Gerenciamento de Senhas e Credenciais}
 
-As pessoas utilizam diferentes métodos para lembrar suas senhas.
+A sexta pergunta do formulário perguntou aos usuários a forma de como gerênciam
+as anoteções de senhas e credenciais.
+Como mostra a figura \ref{fig:resposta_6} em que apresenta a distribuição das
+respostas para a pergunta "Você anota suas senhas ou credências de acesso a
+serviços digitais?".
+
+\begin{figure}[!htbp]
+  \centering
+  \caption*{\normalfont Gerenciamento de Senhas e Credenciais}
+  \begin{tikzpicture}
+  \pie[
+      text=legend,
+      sum=auto,
+      radius=2,
+      after number=\%,
+      color={red!20, blue!20, green!20, yellow!20, orange!20, pink!20},
+  ]{
+      45/Recordam,
+      27/Navegador \/ celular,
+      5/Caderno,
+      18/Notas \/ planilhas,
+      0/Métodos alternativos,
+      5/Outro
+  }
+  \end{tikzpicture}
+  \caption{Sexta pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+  \label{fig:resposta_6}
+\end{figure}
+
+\FloatBarrier
 
 \begin{itemize}
-  \item 10 respostas indicam que "Eu me recordo de minhas senhas";
-  \item 6 respostas indicam que memorizam as senhas "no navegador e/ou no celular";
-  \item Uma pequena parcela anota em cadernos ou utiliza planilhas eletrônicas.
+  \item 45\% marcou a opção "Eu me recordo de minhas senhas", indicando que apenas
+  recordam de suas senhas, sem necessariamente anota-las;
+
+  \item 27\% marcou a opção "Memorizo as senhas no navegador e/ou no celular", indicando
+  que utilizam o navegador de internet ou recursos do celular para memorizar senhas e
+  credenciais;
+
+  \item 5\% marcou a opção "Anoto em um caderno", indicando que utilizam anotações
+  físicas em um caderno para anotar senhas e credenciais;
+
+  \item 18\% marcou a opção "Anoto em bloco de notas ou planilhas eletronica", indicando
+  que utilizam anotações digitais em blocos de notas ou planilhas eletrônicas para
+  anotar senhas e credenciais;
+
+  \item 0\% marcou a opção "Uso métodos alternativos como enviar um e-mail para mim mesmo,
+  mensagens de rascunho ou até um contato falso na agenda", indicando que utilizam
+  anotações digitais com métodos alternativos para anotar senhas e credenciais;
+
+  \item 5\% marcou a opção "Outra", indicando que utilizam outro método para anotar
+  senhas e credenciais que não foram mencionados anteriormente.
 \end{itemize}
 
 \subsubsection{Experiências com Problemas de Credenciais Digitais}
 
-Uma parcela considerável dos entrevistados já enfrentou problemas com suas
-credenciais digitais.
+A sétima pergunta do formulário perguntou aos usuários se já sofreram algum problema com
+suas credenciais digitais.
+Como mostra a figura \ref{fig:resposta_7} em que apresenta a distribuição das
+respostas para a pergunta "Você já sofreu algum problema com credenciais digitais?".
+
+\begin{figure}[!htbp]
+  \centering
+  \caption*{\normalfont Experiências com Problemas de Credenciais Digitais}
+  \begin{tikzpicture}
+  \pie[
+      text=legend,
+      sum=auto,
+      radius=2,
+      after number=\%,
+      color={red!20, blue!20, green!20, yellow!20, orange!20},
+  ]{
+      24/Roubado,
+      6/Conta falsa,
+      0/Prejuízo,
+      29/Perda de acesso,
+      41/Dificuldade
+  }
+  \end{tikzpicture}
+  \caption{Sétima pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+  \label{fig:resposta_7}
+\end{figure}
+\FloatBarrier
 
 \begin{itemize}
-  \item 4 respostas indicam "Já tive meu login roubado";
-  \item 1 resposta indica que "Já criaram uma conta falsa se passando por mim";
-  \item 0 respostas indicam "Já tive prejuízo financeiro por problemas de segurança
-  relacionado a minha conta";
-  \item 7 respostas indicam "Não consegui utilizar algum serviço por causa da
-  dificuldade de acesso digital".
+  \item 24\% marcou a opção "Já tive meu \textit{login} roubado", indicando que já sofreu algum tipo
+  de ataque de invasão de dados ou roubo de credenciais digitais;
+
+  \item 6\% marcou a opção "Já criaram uma conta falsa se passando por mim", indicando que
+  já sofreu algum tipo de ataque de \textit{phishing} ou engenharia social;
+
+  \item 0\% marcou a opção "Já tive prejuízo financeiro por problemas de segurança relacionado
+  a minha conta", indicando que já sofreu algum tipo de prejuízo financeiro por problemas de
+  segurança relacionado a suas credenciais digitais;
+
+  \item 29\% marcou a opção "Já perdi acesso a minha conta", indicando que já sofreu algum
+  tipo de bloqueio ou perda de acesso a suas credenciais digitais;
+
+  \item 41\% marcou a opção "Não consegui utilizar algum serviço por causa da dificuldade de
+  acesso digital", indicando que já sofreu algum tipo de dificuldade de acesso a algum serviço
+  digital.
 \end{itemize}
+
+\subsubsection{Sugestão de Aplicativo, \textit{Software} ou Serviço de Segurança Pessoal}
+
+A oitava pergunta do formulário era opcional, onde os entrevistados poderiam responder
+livremente para sugerir um aplicativo, \textit{software} ou serviço de segurança pessoal.
+
+Houve apenas uma resposta para a pergunta "Sinta-se livre para sugerir um aplicativo,
+\textit{software} ou serviço de segurança pessoal".
+A resposta anônima do entrevistado 3, oferece uma sugestão para "Jogar fora Hotmail
+e Outlook e usar tudo do Google com dados falsos", o que reflete uma preocupação com a
+privacidade e a exposição de dados.
 
 \subsubsection{Percepção de Segurança dos Serviços Digitais}
 
-A maioria dos entrevistados avalia os serviços digitais que utiliza como seguros,
-com a média em 3.88 em uma escala de 1 a 5.
+A nona pergunta do formulário perguntou aos usuários sobre a percepção de segurança dos serviços
+digitais que utilizam em uma escala de classificação de 1 a 5.
+Como mostra a figura \ref{fig:resposta_9} em que apresenta a distribuição das
+respostas para a pergunta "Você acha que os serviços digitais que você mais utiliza são seguros?".
 
-\begin{itemize}
-  \item 9 respostas deram nota 4;
-  \item 5 respostas deram nota 3;
-  \item 3 respostas deram nota 5.
-\end{itemize}
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            title={Percepção de Segurança dos Serviços Digitais},
+            symbolic x coords={1, 2, 3, 4, 5},
+            xtick=data,
+            xlabel={Escala de avaliação},
+            ylabel={Porcentagem (\%)},
+            bar width=0.6cm,
+            nodes near coords,
+        ]
+            \addplot[fill=green!30] coordinates {
+                (1,0) (2,0) (3,29) (4,53) (5,18)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Nona pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+    \label{fig:resposta_9}
+\end{figure}
+\FloatBarrier
 
 \subsubsection{Confiança na Gestão Pessoal de Credenciais}
 
-A confiança nas próprias ações de gestão de credenciais é ligeiramente menor do que a
-percepção da segurança dos serviços, com a média em 3.47 em uma escala de 1 a 5.
+A décima pergunta do formulário perguntou aos usuários sobre a própria percepção de segurança,
+em uma escala de classificação de 1 a 5.
+Como mostra a figura \ref{fig:resposta_10} em que apresenta a distribuição das
+respostas para a pergunta "Você se considera seguro com suas ações de gestão pessoa de suas
+credenciais de serviços digitais?".
 
-\begin{itemize}
-  \item 7 respostas deram nota 4;
-  \item 3 respostas deram nota 5;
-  \item 2 respostas deram nota 3;
-  \item 2 respostas deram nota 2;
-  \item 1 resposta deu nota 1.
-\end{itemize}
-
-\subsubsection{Considerações Adicionais}
-
-A resposta do entrevistado 3, na seção 8, oferece uma sugestão para "Jogar fora Hotmail
-e Outlook e usar tudo do Google com dados falsos", o que reflete uma preocupação com a
-privacidade e a exposição de dados.
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            title={Confiança na Gestão Pessoal de Credenciais},
+            symbolic x coords={1, 2, 3, 4, 5},
+            xtick=data,
+            xlabel={Escala de avaliação},
+            ylabel={Porcentagem (\%)},
+            bar width=0.6cm,
+            nodes near coords,
+        ]
+            \addplot[fill=green!30] coordinates {
+                (1,6) (2,18) (3,18) (4,41) (5,18)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Décima pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+    \label{fig:resposta_10}
+\end{figure}
+\FloatBarrier
 
 \subsection{Avaliação Prática dos Aplicativos de Duplo Fator de Autenticação}
 
@@ -667,7 +845,7 @@ A aplicativo recebeu instruções para ativar o Bluetooth, embora atipico para e
 de autenticação, ao tentar efetuar a autenticação, o aplicativo não respondeu e em tentativas
 posteriores, ocorria erro no aplicativo.
 No final, houve transtornos para recuperar o acesso a conta de usuário, pois nem mesmo os
-metodos extras de autenticação funcionaram.
+métodos extras de autenticação funcionaram.
 
 \begin{figure}[h!]
   \centering
