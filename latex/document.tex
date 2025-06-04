@@ -364,38 +364,35 @@ positivas.
 
 \subsubsection{Força das Senhas}
 
-A primeira pergunta do formulário perguntou aos usuários sobre a força de suas senhas.
-Como mostra a figura \ref{fig:resposta_1} em que apresenta a distribuição das
-respostas para a pergunta "Você usa senhas fortes?".
+A primeira pergunta do formulário abordou a percepção dos entrevistados sobre a robustez
+de suas senhas.
+A Figura \ref{fig:resposta_1} apresenta a distribuição das respostas à pergunta "Você
+utiliza senhas fortes?", contemplando as seguintes opções: "Senha muito longa e
+totalmente aleatória", "Crio frases longas e criativas para utilizar como senha",
+"Prefiro senhas simples sempre que possível" e "Utilizo informações pessoais como senha
+para não esquecer".
 
 \begin{figure}[!htbp]
   \centering
   \caption*{\normalfont Força das Senhas}
   \begin{tikzpicture}
   \pie[
-      text=inside,
+      text=legend,
       sum=auto,
       radius=2,
       after number=\%,
       color={blue!20, red!20, green!20, yellow!20}
   ]{
-      35/,
-      18/,
-      18/,
-      29/
+      35/Senhas grandes e aleatórias,
+      18/Frases como senhas,
+      18/Senhas simples,
+      29/Informatização pessoal como senha
   }
   \end{tikzpicture}
   \caption{Primeira pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
   \label{fig:resposta_1}
 \end{figure}
-
 \FloatBarrier
-\begin{itemize}
-  \item 35\% utilizam senhas muito grandes e totalmente aleatórias;
-  \item 18\% utilizam frases longas e criativas para usar como senha;
-  \item 18\% preferem senhas simples sempre que possível;
-  \item 29\% utilizam informações pessoais como senha para nunca esquecer.
-\end{itemize}
 
 \subsubsection{Vivência com Tecnologia}
 
@@ -405,54 +402,29 @@ respostas para a pergunta "Qual sua vivência com a tecnologia?".
 Vários entrevistados trabalham na área de tecnologia ou estudam na área relacionada,
 indicando um potencial maior conhecimento sobre segurança.
 
-\begin{figure}[!htbp]
-  \centering
-
-  \begin{tikzpicture}
-  \begin{axis}[
-      title={Vivência com Tecnologia},
-      width=12cm,
-      height=8cm,
-      ybar stacked,
-      bar width=1.0cm,
-      enlargelimits=0.15,
-      legend style={
-          at={(0.5,-0.2)},
-          anchor=north,
-          legend columns=4
-      },
-      ylabel={Porcentagem (\%)},
-      symbolic x coords={Não tem vivência, Até 5 anos, Até 10 anos, Mais de 10 anos},
-      xtick=data,
-      nodes near coords,
-      nodes near coords align={vertical},
-      every node near coord/.style={
-          font=\tiny,
-          color=black
-      }
-  ]
-  
-  \addplot [fill=blue!30] coordinates {
-      (Não tem vivência, 5.9) (Até 5 anos, 29.4) (Até 10 anos, 35.3) (Mais de 10 anos, 29.4)
-  };
-  \addplot [fill=red!30] coordinates {
-      (Não tem vivência, 11.8) (Até 5 anos, 17.6) (Até 10 anos, 41.2) (Mais de 10 anos, 29.4)
-  };
-  \addplot [fill=green!30] coordinates {
-      (Não tem vivência, 23.5) (Até 5 anos, 76.5)
-  };
-
-  \legend{
-    Trabalha,
-    Estuda,
-    Utiliza
-  }
-  \end{axis}
-  \end{tikzpicture}
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            xlabel={},
+            xtick=data,
+            height=6cm,
+            width=12cm,
+            ylabel={Porcentagem (\%)},
+            title={Vivência com Tecnologia},
+            symbolic x coords={Trabalha, Estuda, Utiliza},
+        ]
+            \addplot coordinates {(Trabalha, 5.9) (Estuda, 11.8) (Utiliza, 0.0)};
+            \addplot coordinates {(Trabalha, 29.4) (Estuda, 17.6) (Utiliza, 0.0)};
+            \addplot coordinates {(Trabalha, 35.3) (Estuda, 41.2) (Utiliza, 23.5)};
+            \addplot coordinates {(Trabalha, 29.4) (Estuda, 29.4) (Utiliza, 76.5)};
+            \legend{Sem vivência, Até 5 anos, Até 10 anos, Mais de 10 anos},
+        \end{axis}
+    \end{tikzpicture}
   \caption{Segunda pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
   \label{fig:resposta_2}
 \end{figure}
-
 \FloatBarrier
 
 \subsubsection{Memorização de Acessos em Navegadores}
@@ -561,52 +533,51 @@ os códigos OTP.
 Como mostra a figura \ref{fig:resposta_5} em que apresenta a distribuição das
 respostas para a pergunta "Qual aplicativo de autenticação em 2 fatores você utiliza?".
 
-\begin{figure}[htb]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            ybar,
-            title={Aplicativo para Duplo Fator de Autenticação},
-            xtick=\empty,
-            xlabel={},
-            ylabel={Porcentagem (\%)},
-            symbolic x coords={,},
-            xtick=data,
-            width=14cm,
-            height=8cm,
-            bar width=1.0cm,
-            legend style={at={(0.5,-0.2)}, anchor=north, legend columns=2}
-        ]
-            \addplot[fill=orange!30] coordinates {(, 0)};
-            \addlegendentry{Duo}
-
-            \addplot[fill=blue!30] coordinates {(, 4)};
-            \addlegendentry{Aegis}
-
-            \addplot[fill=brown!30] coordinates {(, 0)};
-            \addlegendentry{FreeOTP}
-
-            \addplot[fill=red!30] coordinates {(, 50)};
-            \addlegendentry{Google Autenticator}
-
-            \addplot[fill=green!30] coordinates {(, 33)};
-            \addlegendentry{Microssoft Autenticator}
-
-            \addplot[fill=yellow!30] coordinates {(, 4)};
-            \addlegendentry{Outro}
-
-            \addplot[fill=pink!30] coordinates {(, 0)};
-            \addlegendentry{Não utiliza}
-
-            \addplot[fill=red!30] coordinates {(, 8)};
-            \addlegendentry{Desconhece autenticação em 2 fatores}
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Quinta pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
-    \label{fig:resposta_5}
+\begin{figure}[!htbp]
+  \centering
+  \caption*{\normalfont Aplicativo para Duplo Fator de Autenticação}
+  \begin{tikzpicture}
+  \pie[
+      text=legend,
+      sum=auto,
+      radius=2,
+      after number=\%,
+      color={red!20, blue!20, green!20, yellow!20, orange!20, purple!20, cyan!20, magenta!20}
+  ]{
+      8/Desconhece,
+      0/Não utiliza,
+      50/Google Autenticator,
+      33/Microssoft Autenticator,
+      0/FreeOTP,
+      4/Aegis,
+      0/Duo,
+      4/Outro
+  }
+  \end{tikzpicture}
+  \caption{Quinta pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
+  \label{fig:resposta_5}
 \end{figure}
-
 \FloatBarrier
+
+\begin{itemize}
+  \item 8\% marcou a opção "Desconheço autenticação em 2 fatores", indicando que não conhece
+  o conceito de duplo fator de autenticação;
+
+  \item 0\% marcou a opção "Não uso aplicativo", indicando que não utiliza aplicativo
+  para gerenciar os códigos OTP;
+
+  \item 50\% utilizam o aplicativo Google Autenticator;
+
+  \item 33\% utilizam o aplicativo Microssoft Autenticator;
+
+  \item 0\% utilizam o aplicativo FreeOTP;
+
+  \item 4\% utilizam o aplicativo Aegis;
+
+  \item 0\% utilizam o aplicativo Duo;
+
+  \item 4\% utilizam outro aplicativo.
+\end{itemize}
 
 \subsubsection{Gerenciamento de Senhas e Credenciais}
 
