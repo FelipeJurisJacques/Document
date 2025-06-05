@@ -728,7 +728,9 @@ duplo fator de autenticação, foi solicitado que a conta fosse verificada pelo 
 aplicativo ainda não configurado, alternativamente era possível apenas digitar a senha,
 tornando a experiência confusa.
 Ainda na mesma tentativa, ao finalizar o processo de autenticação, houve um erro de
-comunicação entre o aplicativo e o servidor, impossibilitando a utilização do aplicativo.
+comunicação entre o aplicativo e o servidor, que pode ser observado na figura
+\ref{fig:MicrosoftAutenticatorErrorToManyReequests}, impossibilitando a utilização do
+aplicativo.
 
 \begin{figure}[h!]
   \centering
@@ -737,10 +739,11 @@ comunicação entre o aplicativo e o servidor, impossibilitando a utilização d
   \label{fig:MicrosoftAutenticatorErrorToManyReequests}
 \end{figure}
 
-Outro erro ocorreu ao tentar configurar uma outra conta de usuário que já utilizava o
-duplo fator de autenticação para utilizar os recursos extras de autenticação, fucionando
-de uma forma diferente, onde durante um processo de autenticação, será solicitado uma
-confirmação de notificação no \textit{smartphone}.
+A figura \ref{fig:Microsoft2FactoryAutenticatorError} mostra o outro erro que
+ocorreu ao tentar configurar uma outra conta de usuário que já utilizava o duplo fator de
+autenticação via OTP para utilizar os recursos extras de autenticação, fucionando de uma forma
+diferente, onde durante um processo de autenticação, será solicitado uma confirmação de
+notificação no \textit{smartphone}.
 A aplicativo recebeu instruções para ativar o Bluetooth, embora atipico para esse tipo
 de autenticação, ao tentar efetuar a autenticação, o aplicativo não respondeu e em tentativas
 posteriores, ocorria erro no aplicativo.
@@ -802,17 +805,17 @@ que pode ser instalado em qualquer dispositivo com sistema operacional Windows.
 Existem também versões para outros sistemas operacionais como Linux, Mac OS e até
 BSD, desenvolvido por contribuidores não oficiais.
 
-Por padrão o KeePass é em inglês, necessitando de plugins de tradução para outras
-idiomas.
+A figura \ref{fig:KeePass} mostra a interface do KeePass, por padrão o ele é em inglês,
+necessitando de plugins de tradução para outras idiomas.
 Embora a interface aparente ser para computadores mais antigos, não se trata de um
 aplicativo desatualizado, mas sim um aplicativo com uma interface única, compatível
 com qualquer sistema operacional recente.
 Além de que a interface é amigável para gerenciar senhas, com maior foco no gerenciamento
 das anotações e com sugestões inteligentes de senhas fortes.
-Porém, sem integração com o sistema operacional, ou seja, nele, o usuário vai apenas
+
+KeePass não tem integração com o sistema operacional, ou seja, nele, o usuário vai apenas
 realizar anotações, sem possibilidade de auto completar senhas em processos de autenticação
 e sem sincronização com outros dispositivos.
-
 O KeePass permite salvar as senhas em formato de arquivos com criptografia, os arquivos
 são salvos localmente pelo qual o usuário deve se compromenter em salvar em um local
 seguro e manter cópias de segurança em outros locais.
@@ -837,20 +840,22 @@ em qualquer dispositivo com navegador de internet.
 Assim como KeePass, não há integração com o sistema operacional para auto completar senhas
 em processo de autenticação.
 
-Por padrão o KeeWeb é em inglês, também necessitando de plugins de tradução para outros
-idiomas, porém com a praticidade de poder instalar os plugins diretamente pelo aplicativo.
+A figura \ref{fig:KeeWeb} apresenta o aplicativo KeeWeb.
+Por padrão o a tradução do aplicativo é em inglês, também necessitando de plugins de
+tradução para outros idiomas, entretanto com a praticidade de poder instalar os plugins
+diretamente pelo aplicativo.
 O KeeWeb apresenta uma interface moderna e amigável para gerenciar senhas, com o mesmo foco
-no gerenciamento das anotações assim como no KeePass.
-
-O KeeWeb permite salvar as anotações de senhas com ou sem criptografia, os arquivos ficam
+no gerenciamento das anotações assim como no KeePass, com a diferença de que o KeeWeb
+permite salvar as anotações de senhas com ou sem criptografia, onde os arquivos ficam
 dentro da memoria do navegador de internet e podem ser exportados localmente em formato de
 arquivos.
+
 Há um diferencial nesse aplicativo que permite exportar os arquivos em nuvens de serviços
 de terceiros em que o usuários tiver preferencia.
-
 Utilizar aplicativos de gerenciamento de senhas, apresentou grande praticidade,
 especialmente para os serviços que não se mantem autenticados, solicitam a
 autenticação com frequencia ou perdem a autenticação por defeito.
+
 Porém os aplicativos de gerenciamento de senhas e navegadores de internet não
 são perfeitos, em alguns casos, apresnetam o popup sob a caixa de entrada do
 login, senha ou botões.
