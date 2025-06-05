@@ -369,7 +369,7 @@ de suas senhas.
 A Figura \ref{fig:resposta_1} apresenta a distribuição das respostas à pergunta "Você
 utiliza senhas fortes?", contemplando as seguintes opções: "Senha muito longa e
 totalmente aleatória", "Crio frases longas e criativas para utilizar como senha",
-"Prefiro senhas simples sempre que possível" e "Utilizo informações pessoais como senha
+"Prefiro senhas simples sempre que possível" ou "Utilizo informações pessoais como senha
 para não esquecer".
 
 \begin{figure}[!htbp]
@@ -396,11 +396,14 @@ para não esquecer".
 
 \subsubsection{Vivência com Tecnologia}
 
-A segunda pergunta do formulário perguntou aos usuários sobre a vivência com a técnologia.
-Como mostra a figura \ref{fig:resposta_2} em que apresenta a distribuição das
-respostas para a pergunta "Qual sua vivência com a tecnologia?".
-Vários entrevistados trabalham na área de tecnologia ou estudam na área relacionada,
-indicando um potencial maior conhecimento sobre segurança.
+A segunda pergunta do formulário investigou a percepção dos entrevistados sobre sua
+experiência com tecnologia.
+A Figura \ref{fig:resposta_2} apresenta a distribuição das respostas à pergunta
+"Qual é sua vivência com tecnologia?", considerando as seguintes opções:
+"Trabalho na área de tecnologia", "Estudo na área de tecnologia" e "Utilizo alguma
+tecnologia (celular/computador)".
+Além disso, as respostas foram classificadas de acordo com o tempo de experiência:
+"Não tenho vivência", "Até 5 anos", "Até 10 anos" e "Mais de 10 anos".
 
 \begin{figure}[htb]
     \centering
@@ -413,12 +416,12 @@ indicando um potencial maior conhecimento sobre segurança.
             width=12cm,
             ylabel={Porcentagem (\%)},
             title={Vivência com Tecnologia},
-            symbolic x coords={Trabalha, Estuda, Utiliza},
+            symbolic x coords={Utiliza, Estuda, Trabalha},
         ]
-            \addplot coordinates {(Trabalha, 5.9) (Estuda, 11.8) (Utiliza, 0.0)};
-            \addplot coordinates {(Trabalha, 29.4) (Estuda, 17.6) (Utiliza, 0.0)};
-            \addplot coordinates {(Trabalha, 35.3) (Estuda, 41.2) (Utiliza, 23.5)};
-            \addplot coordinates {(Trabalha, 29.4) (Estuda, 29.4) (Utiliza, 76.5)};
+            \addplot coordinates {(Utiliza, 0.0) (Estuda, 11.8) (Trabalha, 5.9)};
+            \addplot coordinates {(Utiliza, 0.0) (Estuda, 17.6) (Trabalha, 29.4)};
+            \addplot coordinates {(Utiliza, 23.5) (Estuda, 41.2) (Trabalha, 35.3)};
+            \addplot coordinates {(Utiliza, 76.5) (Estuda, 29.4) (Trabalha, 29.4)};
             \legend{Sem vivência, Até 5 anos, Até 10 anos, Mais de 10 anos},
         \end{axis}
     \end{tikzpicture}
@@ -429,109 +432,80 @@ indicando um potencial maior conhecimento sobre segurança.
 
 \subsubsection{Memorização de Acessos em Navegadores}
 
-A terceira pergunta do formulário perguntou aos usuários sobre a funcionalidade presente nos
-navegadores de internet, que permitem a memorização de acessos, evitando o processo de
-autenticação toda vez que o usuário acessa um site.
-Como mostra a figura \ref{fig:resposta_3} em que apresenta a distribuição das
-respostas para a pergunta "Você memoriza seu acessos em navegadores de internet?".
+A terceira pergunta do formulário perguntou aos entrevistados sobre a funcionalidade
+presente nos navegadores de internet, que permitem a memorização de acessos, evitando
+o processo de autenticação toda vez que o usuário acessa um site.
+A Figura \ref{fig:resposta_3} apresenta a distribuição das respostas à pergunta "Você
+memoriza seu acessos em navegadores de internet?", contemplando as seguintes opções:
+"Digito minhas senhas uma única vez e permaneço autenticado", "Permaneço autenticado
+apenas para o básico" ou "Sempre digito minhas senhas, de preferência em aba anônima".
 
 \begin{figure}[!htbp]
   \centering
   \caption*{\normalfont Memorização de Acessos em Navegadores}
   \begin{tikzpicture}
   \pie[
-      text=inside,
+      text=legend,
       sum=auto,
       radius=2,
       after number=\%,
       color={blue!20, red!20, green!20, yellow!20}
   ]{
-      41/,
-      59/
+      41/Permanecem autenticado para o básico,
+      59/Permanecem autenticado,
+      0/Sempre digita senhas
   }
   \end{tikzpicture}
   \caption{Terceira pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
   \label{fig:resposta_3}
 \end{figure}
-
 \FloatBarrier
-\begin{itemize}
-  \item 59\% preferem digitar senhas uma única vez e permaneço autenticado;
-  \item 41\% preferem permanecer autenticado apenas para o básico;
-  \item 0\% preferem sempre digitar senhas, de preferência em aba anônima.
-\end{itemize}
 
 \subsubsection{Utilização do Duplo Fator de Autenticação}
 
-A quarta pergunta do formulário perguntou aos usuários sobre o duplo fator de autenticação.
-Como mostra a figura \ref{fig:resposta_4} em que apresenta a distribuição das
-respostas para a pergunta "Você utiliza autenticação em 2 fatores?".
+A quarta pergunta do formulário questionou aos entrevistados sobre a utilização do
+duplo fator de autenticação.
+A Figura \ref{fig:resposta_4} apresenta a distribuição das respostas à pergunta
+"Você utiliza autenticação em 2 fatores?", considerando as seguintes opções:
+"SMS", "E-mail", "Aplicativo no celular", "Aplicativo 2FA" ou "Dispositivo físico 2FA".
+Além disso, as respostas foram classificadas em: "Não utilizo", "Evito utilizar",
+"Utilizo se necessário" ou "Sempre utilizo".
 
-\begin{figure}[!htbp]
-  \centering
-
-  \begin{tikzpicture}
-  \begin{axis}[
-      title={Utilização do Duplo Fator de Autenticação},
-      width=14cm,
-      height=8cm,
-      ybar stacked,
-      bar width=1.0cm,
-      enlargelimits=0.15,
-      legend style={
-          at={(0.5,-0.2)},
-          anchor=north,
-          legend columns=5
-      },
-      ylabel={Porcentagem (\%)},
-      symbolic x coords={Não utiliza, Evita utilizar, Utiliza se necessário, Sempre utiliza},
-      xtick=data,
-      nodes near coords,
-      nodes near coords align={vertical},
-      every node near coord/.style={
-          font=\tiny,
-          color=black
-      }
-  ]
-  
-  \addplot [fill=blue!30] coordinates {
-      (Não utiliza, 29.4) (Evita utilizar, 11.8) (Utiliza se necessário, 52.9) (Sempre utiliza, 5.9)
-  };
-  \addplot [fill=red!30] coordinates {
-      (Não utiliza, 11.8) (Evita utilizar, 0.0) (Utiliza se necessário, 52.9) (Sempre utiliza, 35.3)
-  };
-  \addplot [fill=green!30] coordinates {
-      (Não utiliza, 17.6) (Evita utilizar, 0.0) (Utiliza se necessário, 64.7) (Sempre utiliza, 17.6)
-  };
-  \addplot [fill=yellow!30] coordinates {
-      (Não utiliza, 17.6) (Evita utilizar, 5.9) (Utiliza se necessário, 58.8) (Sempre utiliza, 17.6)
-  };
-  \addplot [fill=orange!30] coordinates {
-      (Não utiliza, 70.6) (Evita utilizar, 11.8) (Utiliza se necessário, 17.6) (Sempre utiliza, 0.0)
-  };
-
-  \legend{
-    SMS,
-    E-mail,
-    Aplicativo no celular,
-    Aplicativo 2FA,
-    Dispositivo físico 2FA
-  }
-  \end{axis}
-  \end{tikzpicture}
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            xlabel={},
+            xtick=data,
+            height=8cm,
+            width=14cm,
+            ylabel={Porcentagem (\%)},
+            title={Utilização do Duplo Fator de Autenticação},
+            symbolic x coords={Não utiliza, Utiliza se necessário, Evita utilizar, Sempre utiliza},
+        ]
+            \addplot coordinates {(Utiliza se necessário, 52.9) (Evita utilizar, 11.8) (Sempre utiliza, 5.9) (Não utiliza, 29.4)};
+            \addplot coordinates {(Utiliza se necessário, 52.9) (Evita utilizar, 0.0) (Sempre utiliza, 35.3) (Não utiliza, 11.8)};
+            \addplot coordinates {(Utiliza se necessário, 64.7) (Evita utilizar, 0.0) (Sempre utiliza, 17.6) (Não utiliza, 17.6)};
+            \addplot coordinates {(Utiliza se necessário, 58.8) (Evita utilizar, 5.9) (Sempre utiliza, 17.6) (Não utiliza, 17.6)};
+            \addplot coordinates {(Utiliza se necessário, 17.6) (Evita utilizar, 11.8) (Sempre utiliza, 0.0) (Não utiliza, 70.6)};
+            \legend{SMS, E-mail, Aplicativo no celular, Aplicativo 2FA, Dispositivo 2FA},
+        \end{axis}
+    \end{tikzpicture}
   \caption{Quarta pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
   \label{fig:resposta_4}
 \end{figure}
-
 \FloatBarrier
 
 \subsubsection{Aplicativo para Duplo Fator de Autenticação}
 
 Para processos de duplo fator de autenticação baseado em OTP, a quinta pergunta
-do formulário perguntou aos usuários se utilizam algum aplicativo para gerenciar
+do formulário perguntou aos entrevistados se utilizam algum aplicativo para gerenciar
 os códigos OTP.
-Como mostra a figura \ref{fig:resposta_5} em que apresenta a distribuição das
-respostas para a pergunta "Qual aplicativo de autenticação em 2 fatores você utiliza?".
+A Figura \ref{fig:resposta_5} apresenta a distribuição das respostas à pergunta "Qual
+aplicativo de autenticação em 2 fatores você utiliza?", contemplando as seguintes
+opções: "Desconheço autenticação em 2 fatores", "Não uso aplicativo", "Google
+Autenticator", "Microsoft Authenticator", "FreeOTP", "Aegis", "Duo" ou "Outra".
 
 \begin{figure}[!htbp]
   \centering
@@ -544,14 +518,14 @@ respostas para a pergunta "Qual aplicativo de autenticação em 2 fatores você 
       after number=\%,
       color={red!20, blue!20, green!20, yellow!20, orange!20, purple!20, cyan!20, magenta!20}
   ]{
-      8/Desconhece,
-      0/Não utiliza,
-      50/Google Autenticator,
-      33/Microssoft Autenticator,
-      0/FreeOTP,
-      4/Aegis,
-      0/Duo,
-      4/Outro
+    50/Google Autenticator,
+    4/Aegis,
+    4/Outro,
+    33/Microssoft Autenticator,
+    0/Duo,
+    0/FreeOTP,
+    0/Não utiliza,
+    8/Desconhece
   }
   \end{tikzpicture}
   \caption{Quinta pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
@@ -559,33 +533,17 @@ respostas para a pergunta "Qual aplicativo de autenticação em 2 fatores você 
 \end{figure}
 \FloatBarrier
 
-\begin{itemize}
-  \item 8\% marcou a opção "Desconheço autenticação em 2 fatores", indicando que não conhece
-  o conceito de duplo fator de autenticação;
-
-  \item 0\% marcou a opção "Não uso aplicativo", indicando que não utiliza aplicativo
-  para gerenciar os códigos OTP;
-
-  \item 50\% utilizam o aplicativo Google Autenticator;
-
-  \item 33\% utilizam o aplicativo Microssoft Autenticator;
-
-  \item 0\% utilizam o aplicativo FreeOTP;
-
-  \item 4\% utilizam o aplicativo Aegis;
-
-  \item 0\% utilizam o aplicativo Duo;
-
-  \item 4\% utilizam outro aplicativo.
-\end{itemize}
-
 \subsubsection{Gerenciamento de Senhas e Credenciais}
 
-A sexta pergunta do formulário perguntou aos usuários a forma de como gerênciam
-as anoteções de senhas e credenciais.
-Como mostra a figura \ref{fig:resposta_6} em que apresenta a distribuição das
-respostas para a pergunta "Você anota suas senhas ou credências de acesso a
-serviços digitais?".
+A sexta pergunta do formulário perguntou aos entrevistados a forma de como
+gerênciam as anoteções de senhas e credenciais.
+A Figura \ref{fig:resposta_6} apresenta a distribuição das respostas à pergunta
+"Você anota suas senhas ou credências de acesso a serviços digitais?",
+contemplando as seguintes opções: "Eu me recordo de minhas senhas", "Memorizo
+as senhas no navegador e/ou no celular", "Anoto em um caderno", "Anoto em bloco
+de notas ou planilhas eletronica", "Uso métodos alternativos como enviar um
+e-mail para mim mesmo, mensagens de rascunho ou até um contato falso na agenda"
+ou "Outra".
 
 \begin{figure}[!htbp]
   \centering
@@ -598,49 +556,29 @@ serviços digitais?".
       after number=\%,
       color={red!20, blue!20, green!20, yellow!20, orange!20, pink!20},
   ]{
+      0/Métodos alternativos,
       45/Recordam,
       27/Navegador \/ celular,
       5/Caderno,
       18/Notas \/ planilhas,
-      0/Métodos alternativos,
       5/Outro
   }
   \end{tikzpicture}
   \caption{Sexta pergunta da pesquisa. Fonte: elaborado pelo autor, 2025}
   \label{fig:resposta_6}
 \end{figure}
-
 \FloatBarrier
-
-\begin{itemize}
-  \item 45\% marcou a opção "Eu me recordo de minhas senhas", indicando que apenas
-  recordam de suas senhas, sem necessariamente anota-las;
-
-  \item 27\% marcou a opção "Memorizo as senhas no navegador e/ou no celular", indicando
-  que utilizam o navegador de internet ou recursos do celular para memorizar senhas e
-  credenciais;
-
-  \item 5\% marcou a opção "Anoto em um caderno", indicando que utilizam anotações
-  físicas em um caderno para anotar senhas e credenciais;
-
-  \item 18\% marcou a opção "Anoto em bloco de notas ou planilhas eletronica", indicando
-  que utilizam anotações digitais em blocos de notas ou planilhas eletrônicas para
-  anotar senhas e credenciais;
-
-  \item 0\% marcou a opção "Uso métodos alternativos como enviar um e-mail para mim mesmo,
-  mensagens de rascunho ou até um contato falso na agenda", indicando que utilizam
-  anotações digitais com métodos alternativos para anotar senhas e credenciais;
-
-  \item 5\% marcou a opção "Outra", indicando que utilizam outro método para anotar
-  senhas e credenciais que não foram mencionados anteriormente.
-\end{itemize}
 
 \subsubsection{Experiências com Problemas de Credenciais Digitais}
 
-A sétima pergunta do formulário perguntou aos usuários se já sofreram algum problema com
-suas credenciais digitais.
-Como mostra a figura \ref{fig:resposta_7} em que apresenta a distribuição das
-respostas para a pergunta "Você já sofreu algum problema com credenciais digitais?".
+A sétima pergunta do formulário investigou se os entrevistados já sofreram algum
+problema com suas credenciais digitais.
+A Figura \ref{fig:resposta_7} apresenta a distribuição das respostas à pergunta
+"Você já sofreu algum problema com credenciais digitais?", contemplando as
+seguintes opções: "Já tive meu login roubado", "Já criaram uma conta falsa se
+passando por mim", "Já tive prejuízo financeiro por problemas de segurança
+relacionado a minha conta", "Já perdi acesso a minha conta" ou "Não consegui
+utilizar algum serviço por causa da dificuldade de acesso digital".
 
 \begin{figure}[!htbp]
   \centering
@@ -655,8 +593,8 @@ respostas para a pergunta "Você já sofreu algum problema com credenciais digit
   ]{
       24/Roubado,
       6/Conta falsa,
-      0/Prejuízo,
       29/Perda de acesso,
+      0/Prejuízo,
       41/Dificuldade
   }
   \end{tikzpicture}
@@ -664,25 +602,6 @@ respostas para a pergunta "Você já sofreu algum problema com credenciais digit
   \label{fig:resposta_7}
 \end{figure}
 \FloatBarrier
-
-\begin{itemize}
-  \item 24\% marcou a opção "Já tive meu \textit{login} roubado", indicando que já sofreu algum tipo
-  de ataque de invasão de dados ou roubo de credenciais digitais;
-
-  \item 6\% marcou a opção "Já criaram uma conta falsa se passando por mim", indicando que
-  já sofreu algum tipo de ataque de \textit{phishing} ou engenharia social;
-
-  \item 0\% marcou a opção "Já tive prejuízo financeiro por problemas de segurança relacionado
-  a minha conta", indicando que já sofreu algum tipo de prejuízo financeiro por problemas de
-  segurança relacionado a suas credenciais digitais;
-
-  \item 29\% marcou a opção "Já perdi acesso a minha conta", indicando que já sofreu algum
-  tipo de bloqueio ou perda de acesso a suas credenciais digitais;
-
-  \item 41\% marcou a opção "Não consegui utilizar algum serviço por causa da dificuldade de
-  acesso digital", indicando que já sofreu algum tipo de dificuldade de acesso a algum serviço
-  digital.
-\end{itemize}
 
 \subsubsection{Sugestão de Aplicativo, \textit{Software} ou Serviço de Segurança Pessoal}
 
@@ -697,10 +616,12 @@ privacidade e a exposição de dados.
 
 \subsubsection{Percepção de Segurança dos Serviços Digitais}
 
-A nona pergunta do formulário perguntou aos usuários sobre a percepção de segurança dos serviços
-digitais que utilizam em uma escala de classificação de 1 a 5.
+A nona pergunta do formulário solicitou aos entrevistados uma avaliação sobre a própria 
+percepção de segurança dos serviços digitais que utilizam em uma escala de classificação
+de 1 a 5.
 Como mostra a figura \ref{fig:resposta_9} em que apresenta a distribuição das
-respostas para a pergunta "Você acha que os serviços digitais que você mais utiliza são seguros?".
+respostas para a pergunta "Você acha que os serviços digitais que você mais utiliza são
+seguros?".
 
 \begin{figure}[htb]
     \centering
@@ -727,8 +648,8 @@ respostas para a pergunta "Você acha que os serviços digitais que você mais u
 
 \subsubsection{Confiança na Gestão Pessoal de Credenciais}
 
-A décima pergunta do formulário perguntou aos usuários sobre a própria percepção de segurança,
-em uma escala de classificação de 1 a 5.
+A décima pergunta do formulário solicitou aos entrevistados uma avaliação sobre a própria
+percepção de segurança de suas ações pessoais, em uma escala de classificação de 1 a 5.
 Como mostra a figura \ref{fig:resposta_10} em que apresenta a distribuição das
 respostas para a pergunta "Você se considera seguro com suas ações de gestão pessoa de suas
 credenciais de serviços digitais?".
