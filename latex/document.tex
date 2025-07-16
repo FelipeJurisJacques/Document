@@ -347,13 +347,13 @@ generalizações em uma pesquisa quantitativa robusta.
 
 \section{Resultados e Discussão}
 
-\subsection{Pesquisa de Campo}
+\subsection{Resultados do questionário}
 
 O formulário da pesquisa foi configurado para ser anônimo, preservando a segurança dos
 dos usuários.
 Dessa forma, permitiu-se obter informações pessoais de hábitos, percepções e confiança
-dos usuários em relação a senhas, autenticação de dois fatores e segurança digital de
-17 intevistados.
+dos estudantes em relação a senhas, autenticação de dois fatores e segurança digital de
+17 intrevistados.
 
 As respostas revelam uma variedade de práticas de gerenciamento de senhas e níveis
 de uso do duplo fator de autenticação.
@@ -398,7 +398,8 @@ para não esquecer".
 \subsubsection{Vivência com Tecnologia}
 
 A segunda pergunta do formulário investigou a percepção dos entrevistados sobre sua
-experiência com tecnologia.
+experiência com tecnologia, para avaliar as respostas em relação a experiência dos
+intrevistados.
 A Figura \ref{fig:resposta_2} apresenta a distribuição das respostas à pergunta
 "Qual é sua vivência com tecnologia?", considerando as seguintes opções:
 "Trabalho na área de tecnologia", "Estudo na área de tecnologia" e "Utilizo alguma
@@ -435,32 +436,11 @@ Além disso, as respostas foram classificadas de acordo com o tempo de experiên
 
 A terceira pergunta do formulário perguntou aos entrevistados sobre a funcionalidade
 presente nos navegadores de internet, que permitem a memorização de acessos, evitando
-o processo de autenticação toda vez que o usuário acessa um site.
-A Figura \ref{fig:resposta_3} apresenta a distribuição das respostas à pergunta "Você
-memoriza seu acessos em navegadores de internet?", contemplando as seguintes opções:
-"Digito minhas senhas uma única vez e permaneço autenticado", "Permaneço autenticado
-apenas para o básico" ou "Sempre digito minhas senhas, de preferência em aba anônima".
-
-\begin{figure}[!htbp]
-  \centering
-  \caption{Memorização de Acessos em Navegadores de Internet}
-  \begin{tikzpicture}
-  \pie[
-      text=legend,
-      sum=auto,
-      radius=2,
-      after number=\%,
-      color={blue!20, red!20, green!20, yellow!20}
-  ]{
-      41/Permanecem autenticado para o básico,
-      59/Permanecem autenticado,
-      0/Sempre digita senhas
-  }
-  \end{tikzpicture}
-  \caption*{Fonte: elaborado pelo autor, 2025}
-  \label{fig:resposta_3}
-\end{figure}
-\FloatBarrier
+o processo de autenticação toda vez que o usuário acessa o mesmo serviço.
+A pergunta "Você memoriza seu acessos em navegadores de internet?" teve 59\% de votos
+para a opção "Digito minhas senhas uma única vez e permaneço autenticado", 41\% de
+votos para a opção "Permaneço autenticado apenas para o básico" e nenhum voto para a
+opção "Sempre digito minhas senhas, de preferência em aba anônima".
 
 \subsubsection{Utilização do Duplo Fator de Autenticação}
 
@@ -502,42 +482,17 @@ Além disso, as respostas foram classificadas em: "Não utilizo", "Evito utiliza
 
 Para processos de duplo fator de autenticação baseado em OTP, a quinta pergunta
 do formulário perguntou aos entrevistados se utilizam algum aplicativo para gerenciar
-os códigos OTP.
-A Figura \ref{fig:resposta_5} apresenta a distribuição das respostas à pergunta "Qual
-aplicativo de autenticação em 2 fatores você utiliza?", contemplando as seguintes
-opções: "Desconheço autenticação em 2 fatores", "Não uso aplicativo", "Google
-Autenticator", "Microsoft Authenticator", "FreeOTP", "Aegis", "Duo" ou "Outra".
-
-\begin{figure}[!htbp]
-  \centering
-  \caption{Aplicativo para Autenticação em 2 Fatores}
-  \begin{tikzpicture}
-  \pie[
-      text=legend,
-      sum=auto,
-      radius=2,
-      after number=\%,
-      color={red!20, blue!20, green!20, yellow!20, orange!20, purple!20, cyan!20, magenta!20}
-  ]{
-    50/Google Autenticator,
-    4/Aegis,
-    4/Outro,
-    33/Microssoft Autenticator,
-    0/Duo,
-    0/FreeOTP,
-    0/Não utiliza,
-    8/Desconhece
-  }
-  \end{tikzpicture}
-  \caption*{Fonte: elaborado pelo autor, 2025}
-  \label{fig:resposta_5}
-\end{figure}
-\FloatBarrier
+os seus códigos.
+A pergunta "Qual aplicativo de autenticação em 2 fatores você utiliza?" teve 50\% de
+votos para a opção "Google Autenticator", 33% de votos para a opção "Microsoft
+Authenticator", 8\% de votos para a opção "Desconheço autenticação em 2 fatores", 4\%
+de votos para a opção "Aegis" e "Outra", enquanto que as opções "Não uso aplicativo",
+"FreeOTP" e "Duo" não tiveram votos.
 
 \subsubsection{Gerenciamento de Senhas e Credenciais}
 
-A sexta pergunta do formulário perguntou aos entrevistados a forma de como
-gerênciam as anoteções de senhas e credenciais.
+A sexta pergunta do formulário perguntou aos entrevistados a forma de como gerênciam
+as anoteções de senhas e credenciais.
 A Figura \ref{fig:resposta_6} apresenta a distribuição das respostas à pergunta
 "Você anota suas senhas ou credencias de acesso a serviços digitais?",
 contemplando as seguintes opções: "Eu me recordo de minhas senhas", "Memorizo
@@ -572,37 +527,14 @@ ou "Outra".
 
 \subsubsection{Experiências com Problemas de Credenciais Digitais}
 
-A sétima pergunta do formulário investigou se os entrevistados já sofreram algum
-problema com suas credenciais digitais.
-A Figura \ref{fig:resposta_7} apresenta a distribuição das respostas à pergunta
-"Você já sofreu algum problema com credenciais digitais?", contemplando as
-seguintes opções: "Já tive meu login roubado", "Já criaram uma conta falsa se
-passando por mim", "Já tive prejuízo financeiro por problemas de segurança
-relacionado a minha conta", "Já perdi acesso a minha conta" ou "Não consegui
-utilizar algum serviço por causa da dificuldade de acesso digital".
-
-\begin{figure}[!htbp]
-  \centering
-  \caption{Sofreu Problemas com Credenciais Digitais}
-  \begin{tikzpicture}
-  \pie[
-      text=legend,
-      sum=auto,
-      radius=2,
-      after number=\%,
-      color={red!20, blue!20, green!20, yellow!20, orange!20},
-  ]{
-      24/Roubado,
-      6/Conta falsa,
-      29/Perda de acesso,
-      0/Prejuízo,
-      41/Dificuldade
-  }
-  \end{tikzpicture}
-  \caption*{Fonte: elaborado pelo autor, 2025}
-  \label{fig:resposta_7}
-\end{figure}
-\FloatBarrier
+A sétima pergunta do formulário investigou se os entrevistados já sofreram algum problema
+com suas credenciais digitais.
+A pergunta "Você já sofreu algum problema com credenciais digitais?" teve 41\% de votos
+para a opção "Não consegui utilizar algum serviço por causa da dificuldade de acesso
+digital", 29\% de votos para a opção "Já perdi acesso a minha conta", 24\% de votos para a
+opção "Já tive meu login roubado", 6\% de votos para a opção "Já criaram uma conta falsa
+se passando por mim" e nenhum voto para a opção "Já tive prejuízo financeiro por problemas
+de segurança relacionado a minha conta".
 
 \subsubsection{Sugestão de Aplicativo, \textit{Software} ou Serviço de Segurança Pessoal}
 
@@ -620,63 +552,17 @@ privacidade e a exposição de dados.
 A nona pergunta do formulário solicitou aos entrevistados uma avaliação sobre a própria 
 percepção de segurança dos serviços digitais que utilizam em uma escala de classificação
 de 1 a 5.
-Como mostra a figura \ref{fig:resposta_9} em que apresenta a distribuição das
-respostas para a pergunta "Você acha que os serviços digitais que você mais utiliza são
-seguros?".
-
-\begin{figure}[htb]
-    \centering
-    \caption{Considera Seguro os Serviços Digitais Utilizados}
-    \begin{tikzpicture}
-        \begin{axis}[
-            ybar,
-            symbolic x coords={1, 2, 3, 4, 5},
-            xtick=data,
-            xlabel={Escala de avaliação},
-            ylabel={Porcentagem (\%)},
-            bar width=0.6cm,
-            nodes near coords,
-        ]
-            \addplot[fill=green!30] coordinates {
-                (1,0) (2,0) (3,29) (4,53) (5,18)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption*{Fonte: elaborado pelo autor, 2025}
-    \label{fig:resposta_9}
-\end{figure}
-\FloatBarrier
+A pergunta "Você acha que os serviços digitais que você mais utiliza são seguros?" teve 
+41\% de votos para a classificação 4, 18\% de votos para a classificação 2, 3 e 5,
+apenas 6\% de votos para a classificação 1.
 
 \subsubsection{Confiança na Gestão Pessoal de Credenciais}
 
 A décima pergunta do formulário solicitou aos entrevistados uma avaliação sobre a própria
 percepção de segurança de suas ações pessoais, em uma escala de classificação de 1 a 5.
-Como mostra a figura \ref{fig:resposta_10} em que apresenta a distribuição das
-respostas para a pergunta "Você se considera seguro com suas ações de gestão pessoal de suas
-credenciais de serviços digitais?".
-
-\begin{figure}[htb]
-    \centering
-    \caption{Considera Seguro com as Ações Pessoais de Gestão de Credenciais Digitais}
-    \begin{tikzpicture}
-        \begin{axis}[
-            ybar,
-            symbolic x coords={1, 2, 3, 4, 5},
-            xtick=data,
-            xlabel={Escala de avaliação},
-            ylabel={Porcentagem (\%)},
-            bar width=0.6cm,
-            nodes near coords,
-        ]
-            \addplot[fill=green!30] coordinates {
-                (1,6) (2,18) (3,18) (4,41) (5,18)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption*{Fonte: elaborado pelo autor, 2025}
-    \label{fig:resposta_10}
-\end{figure}
-\FloatBarrier
+A pergunta "Você se considera seguro com suas ações de gestão pessoal de suas credenciais
+de serviços digitais?" teve 41\% de votos para a classificação 4, 18\% de votos para a
+classificação 2, 3 e 5, apenas 6\% de votos para a classificação 1.
 
 \subsection{Avaliação Prática dos Aplicativos de Duplo Fator de Autenticação}
 
@@ -717,20 +603,14 @@ pouco escondida.
 Assim como o Microsoft Authenticator tem diversos recursos, há diversas instabilidades
 relacioanado diretamente as contas de usuário Microsoft.
 Em uma tentativa de instalar o aplicativo com uma conta de usuário que ainda não havia
-duplo fator de autenticação, foi solicitado que a conta fosse verificada pelo proprio
+duplo fator de autenticação, foi solicitado que a conta fosse verificada pelo próprio
 aplicativo ainda não configurado, alternativamente era possível apenas digitar a senha,
 tornando a experiência confusa.
 Ainda na mesma tentativa, ao finalizar o processo de autenticação, houve um erro de
-comunicação entre o aplicativo e o servidor, que pode ser observado na figura
-\ref{fig:MicrosoftAutenticatorErrorToManyReequests}, impossibilitando a utilização do
-aplicativo.
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.3\textwidth]{./assets/microsoft_error_1.jpg}
-  \caption{Erro de comunicação entre do aplicativo Microsoft Autenticator}
-  \label{fig:MicrosoftAutenticatorErrorToManyReequests}
-\end{figure}
+comunicação entre o aplicativo e o servidor de autenticação da Microsoft, resultando
+em uma tela branca, apresentando a mensagem de erro "\textit{To Many Reequests}",
+indicando que houve muitas solicitações de autenticação, mesmo essa sendo a primeira
+tentativa, impossibilitando a utilização do aplicativo.
 
 A figura \ref{fig:Microsoft2FactoryAutenticatorError} mostra o outro erro que
 ocorreu ao tentar configurar uma outra conta de usuário que já utilizava o duplo fator de
