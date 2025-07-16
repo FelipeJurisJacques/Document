@@ -254,18 +254,17 @@ fraudulentas.
 Este termo deriva da palavra "fishing", que significa pescar em inglês,
 aludindo à ideia de lançar iscas para capturar vítimas desavisadas.
 
-O artigo de \cite{article:3} começa reconhecendo que as senhas sozinhas são cada vez mais
-insuficientes para proteger contas de usuários e dados.
+O artigo \textit{The many ways to hack 2FA} de \cite{article:3} começa reconhecendo que as senhas
+sozinhas são cada vez mais insuficientes para proteger contas de usuários e dados.
 A crescente adoção do duplo fator de autenticação ou o multifator fator de autenticação, está
 se tornando essencial para a segurança cibernética.
 Apesar dos benefícios, \cite{article:3} destaca que muitas soluções de multifator fator de
 autenticação são erroneamente consideradas invulneráveis.
 Ele argumenta que, com conhecimento e as técnicas certas, o multifator fator de autenticação
-pode ser contornado.
+pode ser contornado, descrevendo várias formas de que os invasores exploram vulnerabilidades no
+\textit{software}, protocolos, infraestrutura da solução do multifator fator de autenticação,
+engenharia social e até roubo de dispositivos:
 
-\cite{article:3} descreve que os invasores exploram vulnerabilidades no \textit{software},
-protocolos, infraestrutura da solução do multifator fator de autenticação, engenharia social
-e até roubo de dispositivos:
 \begin{itemize}
   \item Roubo de \textit{Cookies}: Um dos métodos mais comuns envolve o envio de e-mails de
   \textit{phishing} que simulam uma página de autenticação legítima.
@@ -301,13 +300,10 @@ e até roubo de dispositivos:
   biométricos também representa uma ameaça.
 \end{itemize}
 
-No entanto, \cite{article:3} enfatiza que, para mitigar os riscos associados aos ataques à
-ao multi fator de autenticação, é crucial educar os administradores e usuários finais sobre
-as várias maneiras pelas quais o multi fator de autenticação pode ser hackeado e sobre as
-melhores práticas para se protegerem.
-
-O artigo \cite{article:3} desmistifica a ideia de que a autenticação de dois fatores e
-multifator é uma solução de segurança infalível.
+\cite{article:3} enfatiza que, para mitigar os riscos associados aos ataques ao multi fator de
+autenticação, é crucial educar os administradores e usuários finais sobre as várias maneiras
+pelas quais o multi fator de autenticação pode ser hackeado e também desmistifica a ideia de que
+o multi fator de autenticação é uma solução de segurança infalível.
 Ao detalhar várias técnicas que os atacantes podem usar para contornar o multi fator de
 autenticação, o autor destaca a necessidade de uma compreensão mais profunda das
 vulnerabilidades inerentes a essas tecnologias e dos vetores de ataque.
@@ -320,39 +316,32 @@ contínua são essenciais para garantir a segurança das contas e informações.
 
 \section{Metodologia}
 
-A metodologia utilizada neste estudo é baseada em uma pesquisa descritiva,
-de acordo com \cite{malhotra2001}, a pesquisa descritiva "é um tipo de
-pesquisa que tem como principal objetivo a descrição de algo”.
-Nesse estudo, aplicativos de autenticação de dois fatores e gerenciadores de
-senhas foram sistematicamente avaliados e comparados em termos de
-funcionalidades, usabilidade, e aspectos de segurança, registrando os recursos
-oferecidos, limitações, problemas e dificuldades encontrados.
-
-Durante um período de um semestre de avaliação prática dos aplicativos
-de autenticação de dois fatores, Google Authenticator, Microsoft Authenticator
-e Aegis em sistema Android que foram selecionados com base em sua
-popularidade e disponibilidade, bem como a presença de um aplicativo de
-código aberto (Aegis) para fornecer uma perspectiva mais diversificada.
-Também foi realizado uma busca para experimentar aplicativos para gerenciar
-virtualmente as senhas de serviços digitais baseada do nos sistemas
-operacionais Android e Windows.
-
-O presente estudo também abrange uma pesquisa de campo, de acordo com
+A metodologia utilizada neste estudo é uma pesquisa de campo de carater descritivo.
+De acordo com \cite{malhotra2001}, a pesquisa descritiva "é um tipo de
+pesquisa que tem como principal objetivo a descrição de algo" e de acordo com
 \cite{lakatos2017}, a "Pesquisa de campo é aquela em que o pesquisador observa,
 registra e analisa dados coletados diretamente da realidade, sem intervenção
 artificial.".
-Foi aplicado um questionário \textit{online} \cite{forms2025} elaborado na
-plataforma Microsoft Forms para coletar dados numéricos em relação as
-percepções e práticas de segurança digital de um público-alvo de usuários
-experientes com serviços digitais e que compartilham dados pessoais
-\textit{online} e utilizam serviços digitais para fins, acadêmico e
-profissional.
 
-O questionário abordava temas como o uso de senhas, autenticação em dois
-fatores, gestão de credenciais, entre outros, e foi divulgado em grupos de
-WhatsApp.
-A pesquisa garantiu a privacidade e confidencialidade das respostas,
-assegurando o anonimato dos participantes.
+Nesse estudo, aplicativos de autenticação de dois fatores e gerenciadores de senhas
+foram sistematicamente avaliados e comparados em termos de funcionalidades, usuabilidade,
+aspectos de segurança, registrando os recursos oferecidos, limitações, problemas e
+dificuldades encontrados.
+Durante um período de um semestre de avaliação prática dos aplicativos de autenticação de
+dois fatores, Google Authenticator, Microsoft Authenticator e Aegis em sistema Android que
+foram selecionados com base em sua popularidade e disponibilidade, bem como a presença de
+um aplicativo de código aberto (Aegis) para fornecer uma perspectiva mais diversificada.
+Também foi realizado uma busca para experimentar aplicativos para gerenciar virtualmente
+as senhas de serviços digitais baseada do nos sistemas operacionais Android e Windows.
+
+O presente estudo também aplicou um questionário \textit{online} \cite{forms2025} elaborado
+na plataforma Microsoft Forms para coletar dados numéricos em relação as percepções e
+práticas de segurança digital de um público-alvo de estudantes adultos que compartilham dados
+pessoais \textit{online} e utilizam serviços digitais para fins, acadêmico e profissional.
+O questionário abordava temas como o uso de senhas, autenticação em dois fatores, gestão de
+credenciais, entre outros, e foi divulgado em grupos acadêmicos de WhatsApp.
+A pesquisa garantiu a privacidade e confidencialidade das respostas, assegurando o anonimato
+dos participantes.
 É importante notar que a amostra de 17 entrevistados é bastante limitada para
 generalizações em uma pesquisa quantitativa robusta.
 
@@ -692,7 +681,7 @@ credenciais de serviços digitais?".
 \subsection{Avaliação Prática dos Aplicativos de Duplo Fator de Autenticação}
 
 Durante a avaliação prática dos aplicativos de duplo fator de autenticação,
-foram identificados pontos positivos e negativos em relação à usabilidade,
+foram identificados pontos positivos e negativos em relação à usuabilidade,
 segurança e eficácia dos aplicativos.
 
 \subsubsection{Google Authenticator}
