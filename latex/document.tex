@@ -23,13 +23,14 @@
 \usepackage{placeins}
 \usepackage{pgfplots}
 \usepackage{xcolor}
+\usepackage{changepage}
 
 \usepackage[brazil]{babel}  
 \usepackage[utf8]{inputenc}
      
 \sloppy
 
-\title{Cibersegurança Pessoal em Gestão de Credenciais no Mundo Digital}
+\title{Credenciais de acesso em serviços digitais: avaliação de comportamentos e ferramentas de autenticação}
 
 \author{Felipe Juris Jacques\inst{1} \and Eduardo Dalcin\inst{1} }
 
@@ -218,19 +219,21 @@ restrições de comprimento.
 \cite{article:1}, relata limitações de segurança em algum serviços
 digitais na conclusão de seu artigo:
 
-\begin{quote}
-  \small
-  \linespread{1.0}
-  \selectfont
-  Conforme observado em, 'Muitas vezes os sistemas restringem o comprimento da chave, por exemplo, a
-  Microsoft restringe a 16 caracteres, muitas lojas de comércio eletrônico também restringem drasticamente o
-  número de caracteres de uma senha. Lojas virtuais como Submarino e Americanas.com utilizam o máximo de 8
-  caracteres, enquanto Netshoes utiliza 15 e, ainda, Mercado Livre, 20. Mais grave ainda são os bancos que,
-  além de restringir o tamanho de sua senha, restringem também o alfabeto, aceitando apenas dígitos de 0 a 9.
-  Essa prática de restringir o tamanho e tipo de caracteres nas senhas pode levar à criação de senhas mais
-  fracas e, portanto, mais vulneráveis a ataques.
-  \cite{article:1}
-\end{quote}
+\begin{adjustwidth}{4cm}{0cm}
+  \begin{quote}
+    \small
+    \linespread{1.0}
+    \selectfont
+    Conforme observado em, 'Muitas vezes os sistemas restringem o comprimento da chave, por exemplo, a
+    Microsoft restringe a 16 caracteres, muitas lojas de comércio eletrônico também restringem drasticamente o
+    número de caracteres de uma senha. Lojas virtuais como Submarino e Americanas.com utilizam o máximo de 8
+    caracteres, enquanto Netshoes utiliza 15 e, ainda, Mercado Livre, 20. Mais grave ainda são os bancos que,
+    além de restringir o tamanho de sua senha, restringem também o alfabeto, aceitando apenas dígitos de 0 a 9.
+    Essa prática de restringir o tamanho e tipo de caracteres nas senhas pode levar à criação de senhas mais
+    fracas e, portanto, mais vulneráveis a ataques.
+    \cite{article:1}
+  \end{quote}
+\end{adjustwidth}
 
 A pesquisa forense de \cite{article:2} analisa quinze aplicativos de duplo fator de
 autenticação em diferentes sistemas operacionais, investigando os dados que armazenam
